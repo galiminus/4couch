@@ -8,12 +8,25 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
  *= require bootstrap_and_overrides
+ *= require_self
  *= require_tree .
  */
 
-.navbar .nav > li > a.gravatar {
-    padding-top: 4px;
-    padding-bottom: 4px;
+.navbar .brand {
+    font-size: 40px;
+    color: #eee;
+    &:first-letter {
+	color: #B33;
+    }
+}
+
+#user-nav-container {
+    padding-right: 0px;
+    li > a.gravatar {
+	padding: 8px 0px 8px 4px;
+	> img {
+	    border-radius: 4px;
+	}
+    }
 }

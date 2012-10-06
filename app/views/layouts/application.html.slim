@@ -25,21 +25,20 @@ html lang="en"
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.brand href=root_path 4Couch
-          .container-fluid.nav-collapse
+          a.brand href=root_path 4couch
+          .container-fluid.nav-collapse.pull-left
             ul.nav
               li= link_to "Communities", communities_path
               li= link_to "Couches", couches_path
+          #user-nav-container.container-fluid.pull-right
             - if user_signed_in?
-              ul.nav.pull-right
+              ul.nav
                 li
                   a href=edit_user_registration_path = current_user.email 
                 li
                   a.gravatar href="#"= image_tag current_user.gravatar_url
-                li
-                  = link_to "Sign-out", destroy_user_session_path, method: "delete"
             - else
-              ul.nav.pull-right
+              ul.nav
                 li
                   a href=new_user_registration_path Sign-up
                 li

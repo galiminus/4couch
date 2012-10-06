@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   include Gravtastic
-  gravtastic :size => 32
+  gravtastic :size => 64
 
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
