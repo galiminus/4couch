@@ -11,6 +11,7 @@ gem 'pg'
 
 gem 'devise'
 gem 'gravtastic'
+gem 'friendly_id'
 
 # Gems used only for assets and not required
 # in production environments by default.
