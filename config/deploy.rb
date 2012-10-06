@@ -15,7 +15,7 @@ set :repository, "git@phorque.dyndns.info:four_couch.git"
 set :scm, "git"
 
 set :deploy_to, "/home/four_couch/"
-ssh_options[:port] = 2004
+ssh_options[:port] = 2003
 
 set :public_children, %w(images)
 
