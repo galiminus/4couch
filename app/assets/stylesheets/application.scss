@@ -9,5 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap_and_overrides
  *= require_tree .
  */
+
+.navbar .nav > li > a.gravatar {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
