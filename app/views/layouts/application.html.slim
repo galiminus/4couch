@@ -19,37 +19,37 @@ html lang="en"
   body
     .navbar.navbar-fixed-top
       .navbar-inner
-        .container-fluid
+        .container
           a.btn.btn-navbar data-target=".nav-collapse" data-toggle="collapse"
             span.icon-bar
             span.icon-bar
             span.icon-bar
           a.brand href=root_path 4couch
-          .container-fluid.nav-collapse.pull-left
-            ul.nav
+          .container-fluid.nav-collapse
+            ul.nav.pull-left
               li= link_to t(:communities), communities_path
               li= link_to t(:couches), couches_path
-          #user-nav-container.container-fluid.nav-collapse.pull-right
-            - if user_signed_in?
+            #user-nav-container.nav.pull-right
               ul.nav
-                li.dropdown
-                  = link_to "#", class: 'dropdown-toggle user-nav-link visible-desktop', data: {toggle: 'dropdown'} do
-                    span= current_user.email
-                    = image_tag current_user.gravatar_url
-                  ul.dropdown-menu
+                - if user_signed_in?
+                  li.dropdown
+                    = link_to "#", class: 'dropdown-toggle user-nav-link', data: {toggle: 'dropdown'} do
+                      span= current_user.username
+                      = image_tag current_user.gravatar_url
+                    ul.dropdown-menu
+                      li
+                        a href=edit_user_path(current_user) = t :profile
+                      li
+                        a href=edit_user_registration_path = t :edit_account
+                      li.divider
+                      li
+                        = link_to t(:sign_out), destroy_user_session_path
+                - else
+                  ul.nav
                     li
-                      a href=user_path(current_user) = t :profile
+                      a href=new_user_registration_path = t :sign_up
                     li
-                      a href=edit_user_registration_path = t :edit_account
-                    li.divider
-                    li
-                      = link_to t(:sign_out), destroy_user_session_path
-            - else
-              ul.nav
-                li
-                  a href=new_user_registration_path = t :sign_up
-                li
-                  a href=new_user_session_path = t :sign_in
+                      a href=new_user_session_path = t :sign_in
     .container
       .row
         #main-content.span10.offset1
