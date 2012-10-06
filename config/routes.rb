@@ -2,6 +2,8 @@ FourCouch::Application.routes.draw do
   devise_for :users
   resources :users
 
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   resources :couches
   resources :communities
 
