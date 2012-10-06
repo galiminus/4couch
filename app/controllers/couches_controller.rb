@@ -1,4 +1,6 @@
 class CouchesController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /couches
   # GET /couches.json
   def index

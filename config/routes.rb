@@ -1,4 +1,6 @@
 FourCouch::Application.routes.draw do
+  devise_for :users
+
   resources :couches
 
   resources :communities
@@ -50,7 +52,7 @@ FourCouch::Application.routes.draw do
   #     resources :products
   #   end
 
-  root :to => 'home#show'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
