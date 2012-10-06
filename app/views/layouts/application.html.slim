@@ -28,8 +28,8 @@ html lang="en"
           a.brand href=root_path 4couch
           .container-fluid.nav-collapse.pull-left
             ul.nav
-              li= link_to "Communities", communities_path
-              li= link_to "Couches", couches_path
+              li= link_to t(:communities), communities_path
+              li= link_to t(:couches), couches_path
           #user-nav-container.container-fluid.pull-right
             - if user_signed_in?
               ul.nav
@@ -39,16 +39,16 @@ html lang="en"
                     = image_tag current_user.gravatar_url
                   ul.dropdown-menu
                     li
-                      a href=user_path(current_user) My profile
+                      a href=user_path(current_user) = t :profile
                     li
-                      a href=edit_user_registration_path Edit my account
+                      a href=edit_user_registration_path = t :edit_account
                     li.divider
                     li
-                      = link_to 'Sign-out', destroy_user_session_path
+                      = link_to t(:sign_out), destroy_user_session_path
             - else
               ul.nav
                 li
-                  a href=new_user_registration_path Sign-up
+                  a href=new_user_registration_path = Sign-up
                 li
                   a href=new_user_session_path Sign-in
     .container
