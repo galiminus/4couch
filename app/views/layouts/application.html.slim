@@ -39,7 +39,10 @@ html lang="en"
                     = image_tag current_user.gravatar_url
                   ul.dropdown-menu
                     li
-                      a href=edit_user_registration_path Edit your account
+                      a href=user_path(current_user) My profile
+                    li
+                      a href=edit_user_registration_path Edit my account
+                    li.divider
                     li
                       = link_to 'Sign-out', destroy_user_session_path
             - else
