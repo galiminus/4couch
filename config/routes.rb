@@ -1,4 +1,6 @@
 FourCouch::Application.routes.draw do
+  resources :couches
+
   resources :communities
 
   # The priority is based upon order of creation:
