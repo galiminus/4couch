@@ -29,5 +29,7 @@ group :development do
   gem 'rvm-capistrano'
 end
 
+gem 'thin'
+
 # To use debugger
 # gem 'debugger'
