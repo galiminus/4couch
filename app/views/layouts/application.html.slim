@@ -33,19 +33,24 @@ html lang="en"
           #user-nav-container.container-fluid.pull-right
             - if user_signed_in?
               ul.nav
-                li
-                  a href=edit_user_registration_path = current_user.email 
-                li
-                  a.gravatar href="#"= image_tag current_user.gravatar_url
+                li.dropdown
+                  = link_to "#", class: 'dropdown-toggle user-nav-link', data: {toggle: 'dropdown'} do
+                    span= current_user.email
+                    = image_tag current_user.gravatar_url
+                  ul.dropdown-menu
+                    li
+                      a href=edit_user_registration_path Edit your account
+                    li
+                      = link_to 'Sign-out', destroy_user_session_path
             - else
               ul.nav
                 li
                   a href=new_user_registration_path Sign-up
                 li
                   a href=new_user_session_path Sign-in
-    .container-fluid
-      .row-fluid
-        .span12
+    .container
+      .row
+        #main-content.span10.offset1
           = yield
     
       footer

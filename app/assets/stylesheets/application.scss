@@ -23,10 +23,15 @@
 
 #user-nav-container {
     padding-right: 0px;
-    li > a.gravatar {
-	padding: 8px 0px 8px 4px;
+    li > a.user-nav-link {
+	padding: 8px 12px 8px 12px;
 	> img {
+	    margin-left: 12px;
 	    border-radius: 4px;
 	}
     }
+}
+
+#main-content {
+    background: #fff;
 }
