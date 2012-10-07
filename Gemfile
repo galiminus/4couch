@@ -33,6 +33,8 @@ gem 'jquery-rails'
 group :development do
   gem 'capistrano-af83'
   gem 'rvm-capistrano'
+  gem 'populator'
+  gem 'faker'
 end
 
 gem 'thin'

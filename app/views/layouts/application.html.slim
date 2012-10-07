@@ -52,10 +52,15 @@ html lang="en"
                       a href=new_user_session_path = t :sign_in
     .container
       .row
-        #main-content.span10.offset1
-          .row
-            .span8.offset1
+        section#main-content.span10.offset1
+          .row-fluid
+            .span10.offset1
               = yield
-    
-      footer
+          .row-fluid
+            .span10.offset1
+              footer#page-footer
+                ul.breadcrumb
+                  li
+                    a href="https://github.com/phorque/4couch" Fork me on Github
+    = javascript_include_tag 'http://maps.googleapis.com/maps/api/js?key=AIzaSyBjfN8302UN7Pb_gN5aaVDnTEznfbqwvJg&sensor=true'
     = javascript_include_tag "application"
