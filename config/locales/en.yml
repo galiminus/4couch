@@ -11,7 +11,7 @@ en:
   source_code: Source code
   site_preferences: Site preferences
   contact: Contact
-  password: Password
+  password: Change your password
   simple_form:
     labels:
       user:
