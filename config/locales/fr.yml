@@ -9,3 +9,18 @@ fr:
   about: À-propos
   sitemap: Plan du site
   source_code: Code source
+  site_preferences: Préférences du site
+  contact: Contact
+  password: Mot de passe
+  simple_form:
+    labels:
+      user:
+        email: Adresse email
+        username: Nom d'utilisateur
+        locale: Langue du site
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe
+        current_password: Mot de passe actuel
+  locales:
+    en: Anglais
+    fr: Français

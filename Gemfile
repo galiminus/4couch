@@ -16,6 +16,7 @@ gem 'friendly_id'
 gem 'rails_admin'
 
 gem 'sitemap'
+gem 'simple_form'
 
 # Gems used only for assets and not required
 # in production environments by default.

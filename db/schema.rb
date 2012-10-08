@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121007012247) do
+ActiveRecord::Schema.define(:version => 20121008194521) do
 
   create_table "communities", :force => true do |t|
     t.string   "name"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(:version => 20121007012247) do
     t.string   "slug"
     t.string   "username"
     t.boolean  "admin"
+    t.string   "locale"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
