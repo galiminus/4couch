@@ -18,6 +18,8 @@ gem 'rails_admin'
 gem 'sitemap'
 gem 'simple_form'
 
+gem 'activerecord-postgis-adapter'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
