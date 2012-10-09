@@ -12,6 +12,9 @@ en:
   site_preferences: Site preferences
   contact: Contact
   password: Change your password
+  my_informations: My informations
+  back: Back
+  forgot_password: Forgot your password?
   simple_form:
     labels:
       user:
@@ -21,6 +24,11 @@ en:
         password: Password
         password_confirmation: Password confirmation
         current_passwork: Current password
+  helpers:
+    submit:
+      update: Update
+      user:
+        create: Créer mon compte
   locales:
     en: English
     fr: French

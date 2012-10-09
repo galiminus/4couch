@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121008194521) do
+ActiveRecord::Schema.define(:version => 20121009203654) do
 
   create_table "communities", :force => true do |t|
     t.string   "name"
@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(:version => 20121008194521) do
   end
 
   add_index "communities", ["slug"], :name => "index_communities_on_slug", :unique => true
+
+  create_table "communities_users", :force => true do |t|
+    t.integer "user_id",      :null => false
+    t.integer "community_id", :null => false
+  end
 
   create_table "couches", :force => true do |t|
     t.string   "title"
@@ -70,10 +75,5 @@ ActiveRecord::Schema.define(:version => 20121008194521) do
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
   add_index "users", ["slug"], :name => "index_users_on_slug", :unique => true
-
-  create_table "users_communities", :force => true do |t|
-    t.integer "user_id",      :null => false
-    t.integer "community_id", :null => false
-  end
 
 end

@@ -1,5 +1,5 @@
 fr:
-  communities: Communautées
+  communities: Communautés
   couches: Annonces
   profile: Mon profil
   edit_account: Modifier mon compte
@@ -12,6 +12,9 @@ fr:
   site_preferences: Préférences du site
   contact: Contact
   password: Changer le mot de passe
+  my_informations: Mes informations
+  back: Retour
+  forgot_password: Mot de passe oublié ?
   simple_form:
     labels:
       user:
@@ -21,6 +24,11 @@ fr:
         password: Mot de passe
         password_confirmation: Confirmation du mot de passe
         current_password: Mot de passe actuel
+  helpers:
+    submit:
+      update: Mettre à jour
+      user:
+        create: Créer mon compte
   locales:
     en: Anglais
     fr: Français
