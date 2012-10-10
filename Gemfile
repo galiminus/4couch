@@ -41,6 +41,7 @@ group :development do
   gem 'rvm-capistrano'
   gem 'populator'
   gem 'faker'
+  gem 'rspec-rails'
 end
 
 gem 'thin'
