@@ -11,7 +11,7 @@ set :user, "four_couch"
 require 'capistrano/af83'
 load "af83/info"
 
-set :repository, "git@phorque.dyndns.info:four_couch.git"
+set :repository, "git://github.com/phorque/4couch.git"
 set :scm, "git"
 
 set :deploy_to, "/home/four_couch/"
