@@ -1,14 +1,6 @@
 .row
   .span12
-    h2.slab MEET YOUR BROS
-/  .span4
- /   = simple_form_for(User.new, :url => session_path(:user)) do |f|
- /     = f.label :login
- /     = f.text_field :login
-
- /     = f.label :password
- /     = f.password_field :password
-
- /     label.checkbox
- /       = f.check_box :remember_me
-  /      = t(:remember_me)
+    h2.slab Meet your bros
+.row
+  .span6.offset3
+    button.btn.btn-block.btn-huge href=new_user_registration_path = t :sign_up
