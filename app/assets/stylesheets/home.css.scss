@@ -9,7 +9,6 @@
 	height: 80px;
 	border-radius: 40px;
 	font-family: 'Varela Round', sans-serif;
-	color: #FFF;
 	font-size: 30px;
 	text-transform: uppercase;
 	background: #611;
@@ -25,6 +24,14 @@
 	    -webkit-transform: scale(1.05);
 	    -o-transform: scale(1.05);
 	    transform: scale(1.05);
+	}
+
+	> a {
+	    color: #FFF;
+	    display: block;
+	    &:hover {
+		text-decoration: none;
+	    }
 	}
     }
 }
