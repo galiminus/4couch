@@ -1,11 +1,14 @@
 FourCouch::Application.routes.draw do
-    devise_for :users, :controllers => { :registrations => "registrations" }
-    resources :users
-
-    mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
-    resources :couches
+  devise_for :users, :controllers => { :registrations => "registrations" }
+  resources :users do
     resources :communities
+    resources :couches
+  end
 
-    root :to => 'home#index'
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  resources :couches
+  resources :communities
+
+  root :to => 'home#index'
 end

@@ -40,6 +40,11 @@ html lang="en"
                       = image_tag current_user.gravatar_url
                     ul.dropdown-menu
                       li
+                        a href=user_communities_path(current_user) = t :communities
+                      li
+                        a href=user_couches_path(current_user) = t :couches
+                      li.divider
+                      li
                         a href=edit_user_path(current_user) = t :profile
                       li
                         a href=edit_user_registration_path = t :edit_account
