@@ -33,6 +33,10 @@ html lang="en"
               li= link_to t(:couches), couches_path
             #user-nav-container.nav.pull-right
               ul.nav
+                li
+                  form.navbar-search action="/search" method="get"
+                    input.search-query type="text" name="q" placeholder="Search"
+                li.divider-vertical
                 - if user_signed_in?
                   li.dropdown
                     = link_to "#", class: 'dropdown-toggle user-nav-link', data: {toggle: 'dropdown'} do
@@ -52,11 +56,10 @@ html lang="en"
                       li
                         = link_to t(:sign_out), destroy_user_session_path
                 - else
-                  ul.nav
-                    li
-                      a href=new_user_registration_path = t :sign_up
-                    li
-                      a href=new_user_session_path = t :sign_in
+                  li
+                    a href=new_user_registration_path = t :sign_up
+                  li
+                    a href=new_user_session_path = t :sign_in
     .container
       .row
         section#main-content.span10.offset1

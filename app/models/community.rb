@@ -1,4 +1,14 @@
 class Community < ActiveRecord::Base
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
+
+  mapping do
+    indexes :id,           :index    => :not_analyzed
+    indexes :slug,         :index    => :not_analyzed
+    indexes :name,         :analyzer => 'snowball', :boost => 100
+    indexes :description,  :analyzer => 'snowball'
+  end
+
   extend FriendlyId
   friendly_id :name, use: :slugged
 

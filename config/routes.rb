@@ -11,4 +11,5 @@ FourCouch::Application.routes.draw do
   resources :communities
 
   root :to => 'home#index'
+  get  'search' => 'home#search'
 end
