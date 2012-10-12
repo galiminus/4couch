@@ -15,6 +15,7 @@ en:
   my_informations: My informations
   back: Back
   forgot_password: Forgot your password?
+  report_bug: Report a bug
   simple_form:
     labels:
       user:

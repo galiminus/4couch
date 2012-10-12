@@ -4,24 +4,21 @@
 
 @import url(http://fonts.googleapis.com/css?family=Varela+Round);
 
-body {
-
-}
-
 #main-content {
     background: transparent;
 }
 
+.span8 {
+       padding-right: 30px;
+}
+
 h2.slab {
     font-family: 'Varela Round', sans-serif;
-    text-shadow:  #002 0.1em 0.1em 0,
-                  #002 0.2em 0.2em 0,
-		  #002 0.3em 0.3em 0,
- 		  #002 0.4em 0.4em 0;
-    line-height: 1px;
-    padding-right: 1em;
+    text-shadow:  #611 0.1em 0.1em 0,
+                  #611 0.2em 0.2em 0,
+		  #611 0.3em 0.3em 0,
+ 		  #611 0.4em 0.4em 0;
     color: #FFF;
-    -webkit-text-stroke: 3px black;
 }
 
 footer {

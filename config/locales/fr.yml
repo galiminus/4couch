@@ -15,6 +15,7 @@ fr:
   my_informations: Mes informations
   back: Retour
   forgot_password: Mot de passe oublié ?
+  report_bug: Rapporter un bug
   simple_form:
     labels:
       user:
