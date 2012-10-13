@@ -1,8 +1,7 @@
-h1= @user.username
+- content_for(:nav) do
+  ul.nav.nav-tabs.nav-stacked
+    - [:profile, :communities, :couches].each do |section|
+      li class=(section.to_s == @section ? 'active' : '')
+        = link_to t(section), user_section_path(current_user, section)
 
-p
-  = @user.name
-p
-  = @user.biography
-p
-  = @user.website
+= render :partial => "users/#{@section}"

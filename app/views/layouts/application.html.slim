@@ -50,9 +50,9 @@ html lang="en"
                         a href=user_couches_path(current_user) = t :couches
                       li.divider
                       li
-                        a href=edit_user_path(current_user) = t :profile
+                        a href=edit_user_section_path(current_user, :profile) = t :profile
                       li
-                        a href=edit_user_registration_path = t :edit_account
+                        a href=edit_user_section_path(current_user, :preferences) = t :edit_account
                       li.divider
                       li
                         = link_to t(:sign_out), destroy_user_session_path
@@ -61,24 +61,27 @@ html lang="en"
                     a href=new_user_registration_path = t :sign_up
                   li
                     a href=new_user_session_path = t :sign_in
-    .container
+    .container.main
       .row
-        section#main-content.span10.offset1
-          .row-fluid
-            .span10.offset1
-              = yield
-          .row-fluid
-            .span10.offset1
-              footer#page-footer
-                ul.breadcrumb
-                  li
-                    a href="https://github.com/phorque/4couch/wiki" target="_blank" = t :about
-                  li.divider |
-                  li
-                    a href="https://github.com/phorque/4couch" target="_blank" = t :source_code
-                  li.divider |
-                  li
-                    a href="https://github.com/phorque/4couch/issues" target="_blank" = t :report_bug
+        - if content_for?(:nav)
+          #nav.span2.offset2
+            = content_for(:nav)
+          #content.span6
+            = yield
+        - else
+          = yield
+      .row
+        .span8.offset2
+          footer
+            ul.breadcrumb
+              li
+                a href="https://github.com/phorque/4couch/wiki" target="_blank" = t :about
+              li.divider |
+              li
+                a href="https://github.com/phorque/4couch" target="_blank" = t :source_code
+              li.divider |
+              li
+                a href="https://github.com/phorque/4couch/issues" target="_blank" = t :report_bug
     = javascript_include_tag 'http://maps.googleapis.com/maps/api/js?key=AIzaSyBjfN8302UN7Pb_gN5aaVDnTEznfbqwvJg&sensor=true'
     = javascript_include_tag "application"
     = javascript_include_tag params[:controller]

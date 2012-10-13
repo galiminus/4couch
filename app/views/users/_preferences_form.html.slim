@@ -1,0 +1,13 @@
+= form_for @user, html: { class: 'form-horizontal' } do |f|
+  .control-group
+    = f.label :username, class: 'control-label'
+    .controls
+      = f.text_field :username
+
+  .control-group
+    = f.label :locale, class: 'control-label'
+    .controls
+      = f.select :locale, locales_collection
+
+  .form-actions
+    = f.submit class: "btn btn-primary"

@@ -2,52 +2,14 @@
  *= require slabtext
  */
 
-#main-content {
-    background: transparent;
-
-    .btn-huge {
-	height: 80px;
-	border-radius: 40px;
-	font-family: 'Varela Round', sans-serif;
-	font-size: 30px;
-	text-transform: uppercase;
-	background: #611;
-	border: none;
-	letter-spacing: 5px;
-
-	-webkit-transition: all .3s ease-out; 
-	-moz-transition: all .3s ease-out; 
-	-o-transition: all .3s ease-out; 
-	transition: all .3s ease-out;
-	&:hover {
-	    -moz-transform: scale(1.05);
-	    -webkit-transform: scale(1.05);
-	    -o-transform: scale(1.05);
-	    transform: scale(1.05);
-	}
-
-	> a {
-	    color: #FFF;
-	    display: block;
-	    &:hover {
-		text-decoration: none;
-	    }
-	}
-    }
-}
-
-.span8 {
-       padding-right: 30px;
-}
-
 h2.slab {
     font-family: 'Varela Round', sans-serif;
-    text-shadow:  #611 0.1em 0.1em 0,
-                  #611 0.2em 0.2em 0,
-		  #611 0.3em 0.3em 0,
-		  #611 0.4em 0.4em 0;
+    text-shadow:  #111 0.1em 0.1em 0,
+                  #111 0.2em 0.2em 0,
+		  #111 0.3em 0.3em 0,
+		  #111 0.4em 0.4em 0;
     text-transform: uppercase;
-    color: #FFF;
+    color: #822;
 }
 
 footer {

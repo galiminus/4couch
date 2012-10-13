@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  attr_accessible :avatar
+  has_attached_file :avatar, :styles => { :medium => ["64x64>", :jpg] }
+
   extend FriendlyId
   friendly_id :username, use: :slugged
 

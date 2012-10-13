@@ -1,5 +1,7 @@
 FourCouch::Application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations" }
+
+  match "/users/:id/edit/:section" => "users#edit", :via => :get
   resources :users do
     resources :communities
     resources :couches

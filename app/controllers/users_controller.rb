@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
+  before_filter :authenticate_user!
+
   def show
     @user = User.find(params[:id])
+    @section = params[:section] || 'profile'
 
     respond_to do |format|
       format.html # show.html.erb
@@ -11,8 +14,6 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
 
-    puts @user.inspect
-
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
@@ -22,5 +23,10 @@ class UsersController < ApplicationController
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+    @section = params[:section] || 'profile'
   end
 end

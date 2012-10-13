@@ -11,25 +11,9 @@ ul#edit-account-nav.nav.nav-pills
   .tab-content.registration
     .tab-pane.active id="site-preferences"
       = devise_error_messages!
-      = f.label :username
-      = f.text_field :username
-
-      = f.input :locale, :collection => locales_collection, :selected => I18n.locale
 
     .tab-pane id="contact"
-      = f.label :email
-      = f.email_field :email
 
-    .tab-pane id="password"
-      = f.label :current_password
-      = f.password_field :current_password, :required => true
-      span.help-inline we need your current password to confirm your changes
-
-      = f.label :password
-      = f.password_field :password, :autocomplete => "off"
-
-      = f.label :password_confirmation
-      = f.password_field :password_confirmation
 
   .form-actions
     = f.submit class: "btn btn-primary"
