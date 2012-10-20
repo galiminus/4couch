@@ -3,8 +3,8 @@ FourCouch::Application.routes.draw do
 
   match "/users/:id/edit/:section" => "users#edit", :via => :get
   resources :users do
-    resources :communities
-    resources :couches
+    resources :communities, :controller => 'users_communities'
+    resources :couches, :controller => 'users_couches'
   end
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'

@@ -13,4 +13,6 @@ class Couch < ActiveRecord::Base
   friendly_id :title, use: :slugged
 
   attr_accessible :description, :title
+
+  has_and_belongs_to_many :users
 end

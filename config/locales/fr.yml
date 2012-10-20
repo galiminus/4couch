@@ -1,21 +1,20 @@
 fr:
+  profile: Profil
   communities: Communautés
+  my_communities: Mes communautés
   couches: Annonces
-  profile: Mon profil
-  edit_account: Compte
+  my_couches: Mes annonces
+  edit_profile: Modifier le profil
+  edit_preferences: Compte
   sign_out: Déconnexion
   sign_up: Rejoignez-nous !
   sign_in: Connection
-  about: À-propos
-  sitemap: Plan du site
-  source_code: Code source
   site_preferences: Préférences du site
   contact: Contact
   password: Changer le mot de passe
   my_informations: Mes informations
   back: Retour
   forgot_password: Mot de passe oublié ?
-  report_bug: Rapporter un bug
   simple_form:
     labels:
       user:
@@ -30,6 +29,11 @@ fr:
       update: Mettre à jour
       user:
         create: Créer mon compte
+  footer:
+    about: À-propos
+    api_documentation: Documentation de l'API
+    source_code: Code source
+    report_bug: Rapporter un bug
   locales:
     en: Anglais
     fr: Français

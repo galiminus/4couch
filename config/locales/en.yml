@@ -1,21 +1,20 @@
 en:
+  profile: Profile
   communities: Communities
+  my_communities: My communities
   couches: Couches
-  profile: Edit profile
-  edit_account: Settings
+  my_couches: My couches
+  edit_profile: Edit profile
+  edit_preferences: Settings
   sign_out: Sign-out
   sign_up: Join-us!
   sign_in: Sign-in
-  about: About
-  sitemap: Site map
-  source_code: Source code
   site_preferences: Site preferences
   contact: Contact
   password: Change your password
   my_informations: My informations
   back: Back
   forgot_password: Forgot your password?
-  report_bug: Report a bug
   simple_form:
     labels:
       user:
@@ -30,6 +29,11 @@ en:
       update: Update
       user:
         create: Créer mon compte
+  footer:
+    about: About
+    api_documentation: API documentation
+    source_code: Source code
+    report_bug: Report a bug
   locales:
     en: English
     fr: French

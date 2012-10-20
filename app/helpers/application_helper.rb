@@ -12,4 +12,8 @@ module ApplicationHelper
   def user_section_path(user, section)
     "/users/#{user.slug}/#{section}"
   end
+
+  def current_section
+    (params[:section] || :profile).to_sym
+  end
 end

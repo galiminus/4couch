@@ -1,0 +1,7 @@
+ul.nav.nav-tabs.nav-stacked
+    li
+      = link_to t(:profile), user_path(current_user)
+    li
+      = link_to t(:my_communities), user_communities_path(current_user)
+    li
+      = link_to t(:my_couches), user_couches_path(current_user)

@@ -1,3 +1,6 @@
+- content_for(:nav) do
+  = render 'users/nav'
+
 ul
   - @couches.each do |couch|
     li= couch.title

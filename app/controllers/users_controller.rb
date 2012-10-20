@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @section = params[:section] || 'profile'
 
     respond_to do |format|
       format.html # show.html.erb
@@ -27,6 +26,5 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
-    @section = params[:section] || 'profile'
   end
 end

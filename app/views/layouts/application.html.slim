@@ -45,14 +45,18 @@ html lang="en"
                       = image_tag current_user.gravatar_url
                     ul.dropdown-menu
                       li
-                        a href=user_communities_path(current_user) = t :communities
-                      li
-                        a href=user_couches_path(current_user) = t :couches
+                        a href=user_path(current_user)
+                          strong= t :profile
                       li.divider
                       li
-                        a href=edit_user_section_path(current_user, :profile) = t :profile
+                        a href=user_communities_path(current_user) = t :my_communities
                       li
-                        a href=edit_user_section_path(current_user, :preferences) = t :edit_account
+                        a href=user_couches_path(current_user) = t :my_couches
+                      li.divider
+                      li
+                        a href=edit_user_section_path(current_user, :profile) = t :edit_profile
+                      li
+                        a href=edit_user_section_path(current_user, :preferences) = t :edit_preferences
                       li.divider
                       li
                         = link_to t(:sign_out), destroy_user_session_path
@@ -64,9 +68,9 @@ html lang="en"
     .container.main
       .row
         - if content_for?(:nav)
-          #nav.span2.offset2
+          #nav.span3.offset2
             = content_for(:nav)
-          #content.span6
+          #content.span5
             = yield
         - else
           = yield
@@ -75,13 +79,16 @@ html lang="en"
           footer
             ul.breadcrumb
               li
-                a href="https://github.com/phorque/4couch/wiki" target="_blank" = t :about
+                a href="https://github.com/phorque/4couch/wiki" target="_blank" = t 'footer.about'
               li.divider |
               li
-                a href="https://github.com/phorque/4couch" target="_blank" = t :source_code
+                a href="https://github.com/phorque/4couch/wiki" target="_blank" = t 'footer.api_documentation'
               li.divider |
               li
-                a href="https://github.com/phorque/4couch/issues" target="_blank" = t :report_bug
+                a href="https://github.com/phorque/4couch" target="_blank" = t 'footer.source_code'
+              li.divider |
+              li
+                a href="https://github.com/phorque/4couch/issues" target="_blank" = t 'footer.report_bug'
     = javascript_include_tag 'http://maps.googleapis.com/maps/api/js?key=AIzaSyBjfN8302UN7Pb_gN5aaVDnTEznfbqwvJg&sensor=true'
     = javascript_include_tag "application"
     = javascript_include_tag params[:controller]

@@ -1,7 +1,7 @@
 - content_for(:nav) do
   ul.nav.nav-tabs.nav-stacked
     - [:profile, :preferences, :contact, :password].each do |section|
-      li class=(section.to_s == @section ? 'active' : '')
+      li class=(section == current_section ? 'active' : '')
         = link_to t(section), edit_user_section_path(current_user, section)
 
-= render :partial => "users/#{@section}_form"
+= render :partial => "users/#{current_section}_form"
