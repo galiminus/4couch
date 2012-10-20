@@ -13,11 +13,16 @@
  */
 
 
-.navbar .brand {
-    font-size: 40px;
-    color: #eee;
-    &:first-letter {
-	color: #B33;
+.navbar {
+    .navbar-inner {
+	border-radius: 0px;
+    }
+    .brand {
+	font-size: 40px;
+	color: #eee;
+	&:first-letter {
+	    color: #B33;
+	}
     }
 }
 
@@ -35,7 +40,7 @@
 }
 
 .container.main {
-    padding-top: 40px;
+    padding-top: 10px;
     background: #FFF;
 }
 
