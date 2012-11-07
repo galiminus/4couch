@@ -43,12 +43,10 @@ html lang="en"
                     ul.dropdown-menu
                       li
                         a href=user_path(current_user)
-                          strong= t :profile
-                      li.divider
-                      li
-                        a href=user_communities_path(current_user) = t :my_communities
-                      li
-                        a href=user_couches_path(current_user) = t :my_couches
+                          - if current_user.name.present?
+                            strong= current_user.name
+                          - else
+                            strong= t :profile
                       li.divider
                       li
                         a href=edit_user_section_path(current_user, :profile) = t :edit_profile

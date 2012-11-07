@@ -1,9 +1,11 @@
-.well.well-large
-  .span4
+.row
+  .pagination-centered
     .form-search action=communities_path method="get"
       input.input-medium.search-query.span3 type="text" name="q" placeholder=t(:search_placeholder)
-  .span3
-    a.btn.btn-success.span2.pull-right href=new_community_path = t(:create_your_own_community)
-ul
+      a href=new_community_path
+        button.btn-link = t(:create_your_own_community)
+ul.thumbnails
   - @communities.each do |community|
-    li= community.name
+    li.thumbnail
+      a href=community_path(community)
+        = community.name
