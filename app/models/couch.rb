@@ -2,6 +2,12 @@ class Couch < ActiveRecord::Base
   include Tire::Model::Search
   include Tire::Model::Callbacks
 
+  acts_as_gmappable
+
+  def gmaps4rails_address
+#    "#{self.city}, #{self.country}"
+  end
+
   mapping do
     indexes :id,           :index    => :not_analyzed
     indexes :slug,         :index    => :not_analyzed

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121020193733) do
+ActiveRecord::Schema.define(:version => 20121107193932) do
 
   create_table "communities", :force => true do |t|
     t.string   "name"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(:version => 20121020193733) do
     t.string   "slug"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "city"
+    t.string   "country"
   end
 
   add_index "couches", ["slug"], :name => "index_couches_on_slug", :unique => true

@@ -22,6 +22,8 @@ gem 'tire'
 gem 'kaminari'
 gem 'paperclip'
 
+gem 'gmaps4rails'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

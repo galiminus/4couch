@@ -15,7 +15,7 @@ namespace :db do
     Community.populate 20 do |community|
       community.name = Populator.words(1..3).titleize
       community.description = Populator.sentences(2..10)
-      community.users = User.all.sample(10)
+#      community.users = User.all.sample(10)
     end
 
     Couch.delete_all
@@ -25,7 +25,8 @@ namespace :db do
       couch.created_at = 2.years.ago..Time.now
       couch.latitude = rand(180) - 90
       couch.longitude = rand(180)
-      couch.user = User.all.sample(1)
+      couch.city = ["Paris", "Montpellier", "Le Mans", "Strasbourg", "Pau"].sample
+#      couch.user_id = User.all.sample
     end
   end
 end
