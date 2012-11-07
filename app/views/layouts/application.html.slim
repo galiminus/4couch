@@ -29,8 +29,8 @@ html lang="en"
             span.icon-bar
           a.brand href=root_path 4couch
           .container-fluid.nav-collapse
-            ul.nav.pull-left
-              li= link_to t(:couches), couches_path
+            form.navbar-search.pull-left
+              input.search-query type="text" placeholder="Search"
             #user-nav-container.nav.pull-right
               ul.nav
                 li.divider-vertical
