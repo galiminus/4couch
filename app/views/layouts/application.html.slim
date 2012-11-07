@@ -4,7 +4,7 @@ html lang="en"
     meta charset="utf-8"
     meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"
     meta name="viewport" content="width=device-width, initial-scale=1.0"
-    title= content_for?(:title) ? yield(:title) : "4Couch"
+    title= content_for?(:title) ? yield(:title) : "4Cou.ch"
     = csrf_meta_tags
 
     /[if lt IE 9]
@@ -65,6 +65,9 @@ html lang="en"
           #nav.span3.offset2
             = content_for(:nav)
           #content.span5
+            = yield
+        - elsif params[:controller] == 'home'
+          #content
             = yield
         - else
           #content.span8.offset2

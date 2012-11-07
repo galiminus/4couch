@@ -4,12 +4,25 @@
 
 h2.slab {
     font-family: 'Varela Round', sans-serif;
-    text-shadow:  #111 0.1em 0.1em 0,
+/*    text-shadow:  #111 0.1em 0.1em 0,
                   #111 0.2em 0.2em 0,
 		  #111 0.3em 0.3em 0,
-		  #111 0.4em 0.4em 0;
+		  #111 0.4em 0.4em 0;*/
     text-transform: uppercase;
-    color: #822;
+    color: #333;
+}
+
+p.definition {
+    text-align: justify;
+    .title {
+	font-size: 14px;
+	margin-left: -10px;
+    }
+    .content {
+    }
+    .example {
+	display: block;
+    }
 }
 
 #map {
@@ -24,3 +37,7 @@ h2.slab {
 	width: auto; display:inline; 
     }
 } 
+
+footer {
+    margin-top: 20px;
+}
