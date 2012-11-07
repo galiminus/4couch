@@ -4,9 +4,10 @@ module HomeHelper
             markers: { data: couches },
             map_options: {
               type: "ROADMAP",
-              center_longitude: 200,
-              auto_zoom: true,
-              auto_adjust: true,
+              auto_adjust: false,
+              zoom: 2,
+              center_latitude: 30.769569,
+              center_longitude: 5.730057,
               raw: "{
                 mapTypeControl: false,
                 zoomControl: false,
