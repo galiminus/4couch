@@ -1,5 +1,5 @@
 module HomeHelper
-  def map(couches)
+  def home_map(couches)
     gmaps({
             markers: { data: couches },
             map_options: {

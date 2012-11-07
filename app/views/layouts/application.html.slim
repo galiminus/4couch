@@ -29,8 +29,8 @@ html lang="en"
             span.icon-bar
           a.brand href=root_path 4couch
           .container-fluid.nav-collapse
-            form.navbar-search.pull-left
-              input.search-query type="text" placeholder="Search"
+            form.navbar-search.pull-left action=couches_path
+              input.search-query type="text" placeholder="Search" name="q"
             #user-nav-container.nav.pull-right
               ul.nav
                 li.divider-vertical

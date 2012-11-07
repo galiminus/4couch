@@ -1,9 +1,8 @@
 class HomeController < ApplicationController
   def index
-    @couches = Couch.all.to_gmaps4rails do |couch, marker|
-      marker.json({id: couch.id})
-      marker.title couch.title
-    end
+    redirect_to couches_path if user_signed_in?
+
+    @couches = Couch.all.to_gmaps4rails
   end
 
   def search

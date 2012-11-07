@@ -49,3 +49,16 @@
 #nav {
     background: #FFF;
 }
+
+#map {
+    height: 400px;
+    border: 2px solid #333;
+    border-radius: 2px;
+
+    img { 
+	max-width: none;
+    }
+    label { 
+	width: auto; display:inline; 
+    }
+} 

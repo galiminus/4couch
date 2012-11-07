@@ -4,7 +4,10 @@ class CouchesController < ApplicationController
   # GET /couches
   # GET /couches.json
   def index
-    @couches = Couch.all
+    @couches = Couch.all.to_gmaps4rails do |couch, marker|
+      marker.json({id: couch.id})
+      marker.title couch.title
+    end
 
     respond_to do |format|
       format.html # index.html.erb
