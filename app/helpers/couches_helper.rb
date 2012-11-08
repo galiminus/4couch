@@ -3,6 +3,7 @@ module CouchesHelper
     gmaps({
             markers: { data: couches },
             map_options: {
+              libraries: ['places'],
               type: "ROADMAP",
               auto_adjust: false,
               zoom: 2,

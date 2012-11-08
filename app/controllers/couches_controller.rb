@@ -5,7 +5,7 @@ class CouchesController < ApplicationController
   # GET /couches.json
   def index
     @couches = Couch.all.to_gmaps4rails do |couch, marker|
-      marker.json({id: couch.id})
+      marker.json({id: couch.id, link: couch_path(couch)})
       marker.title couch.title
     end
 
