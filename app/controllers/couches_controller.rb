@@ -4,6 +4,8 @@ class CouchesController < ApplicationController
   # GET /couches
   # GET /couches.json
   def index
+    @lat = params[:lat].to_f
+    @lng = params[:lng].to_f
     @couches = Couch.all.to_gmaps4rails do |couch, marker|
       marker.json({id: couch.id, link: couch_path(couch)})
       marker.title couch.title
