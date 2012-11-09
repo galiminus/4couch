@@ -38,15 +38,23 @@ $(document).ready(function() {
 	}
     }
 
+    var locations = {};
     $(".search-query").typeahead({
 	minLength: 3,
+	items: 20,
 	source: function(query, process) {
 	    $.get("/places", {q: query}, function(result) {
 		names = $.map(result, function(locality) {
-		    return (locality.name + " - " + locality.country);
+		    var name = locality.name + " - " + locality.admin1 + ", " + locality.country;
+		    locations[name] = {lat: locality.lat, lng: locality.lng};
+
+		    return (name);
 		});
 		process(names);
 	    });
+	},
+	updater: function(name) {
+	    $(location).attr('href', '/couches?lat=' + locations[name].lat + "&lng=" + locations[name].lng);
 	}
     })
 });

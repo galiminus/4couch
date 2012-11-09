@@ -5,13 +5,16 @@ class PlacesController < ApplicationController
 
     respond_to do |format|
       format.json do
-        render json: @places.map do |city|
+        render json: (@places.map do |place|
           {
-            name: city.name,
-            lat: city.lat,
-            lng: city.lng
+            name: place.name,
+            admin1: place.admin1,
+            admin2: place.admin2,
+            country: place.country,
+            lat: place.lat,
+            lng: place.lng
           }
-        end
+        end)
       end
     end
   end

@@ -4,6 +4,8 @@ class Place
       store({
               :id               => params[:id],
               :name             => params[:name],
+              :admin1           => params[:admin1],
+              :admin2           => params[:admin2],
               :country          => params[:country],
               :population       => params[:population].to_i,
               :lat              => params[:lat].to_f,
@@ -14,13 +16,13 @@ class Place
     end
   end
 
-  def self.search(query, options = {})
-    query_string = query.presence || '*'
-    Tire.search('places') do |search|
-      search.query do |query|
-        query.string query_string, :default_operator => 'AND'
+  def self.search(query_string, options = {})
+    query_string ||= '*'
+    Tire.search 'places' do
+      query do
+        string query_string, :default_operator => 'AND'
       end
-      search.sort { by :population, 'asc' }
+      sort { by :population, 'desc' }
     end.results
   end
 end

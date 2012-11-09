@@ -12,7 +12,7 @@ module CouchesHelper
               raw: "{
                 mapTypeControl: false,
                 zoomControl: true,
-                panControl: true,
+                panControl: false,
                 scaleControl: false
               }"
             }
