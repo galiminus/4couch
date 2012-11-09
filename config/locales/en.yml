@@ -1,9 +1,6 @@
 en:
   profile: Profile
-  communities: Communities
-  my_communities: My communities
-  couches: Couches
-  my_couches: My couches
+  my_place: My place
   edit_profile: Edit profile
   edit_preferences: Settings
   sign_out: Sign-out
@@ -16,7 +13,6 @@ en:
   back: Back
   forgot_password: Forgot your password?
   search_placeholder: Search...
-  create_your_own_community: Create your own
   home:
     definition:
       title: Hospitality (noun)
