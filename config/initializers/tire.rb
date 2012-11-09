@@ -1,4 +1,3 @@
-require 'curb'
 require 'tire/http/clients/curb'
 
 Tire.configure do

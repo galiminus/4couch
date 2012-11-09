@@ -19,10 +19,13 @@ gem 'sitemap'
 gem 'simple_form'
 
 gem 'tire'
+gem 'curb'
 gem 'kaminari'
 gem 'paperclip'
 
 gem 'gmaps4rails'
+
+gem 'redis-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.

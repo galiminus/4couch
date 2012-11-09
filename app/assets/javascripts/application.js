@@ -37,4 +37,16 @@ $(document).ready(function() {
 	    setLinkOnMarkers();
 	}
     }
+
+    $(".search-query").typeahead({
+	minLength: 3,
+	source: function(query, process) {
+	    $.get("/places", {q: query}, function(result) {
+		names = $.map(result, function(locality) {
+		    return (locality.name + " - " + locality.country);
+		});
+		process(names);
+	    });
+	}
+    })
 });
