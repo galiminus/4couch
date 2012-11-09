@@ -12,7 +12,8 @@ module HomeHelper
                 mapTypeControl: false,
                 zoomControl: false,
                 panControl: false,
-                scaleControl: false
+                scaleControl: false,
+                streetViewControl: false
               }"
             }
           })
