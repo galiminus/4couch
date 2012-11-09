@@ -50,7 +50,7 @@ html lang="en"
                       li
                         a href=edit_user_section_path(current_user, :profile) = t :edit_profile
                       li
-                        a href=edit_user_section_path(current_user, :preferences) = t :edit_preferences
+                        a href=edit_user_section_path(current_user, :settings) = t :edit_preferences
                       li.divider
                       li
                         = link_to t(:sign_out), destroy_user_session_path

@@ -1,6 +1,6 @@
 - content_for(:nav) do
   ul.nav.nav-tabs.nav-stacked
-    - [:profile, :preferences, :contact, :password].each do |section|
+    - [:profile, :settings, :password].each do |section|
       li class=(section == current_section ? 'active' : '')
         = link_to t(section), edit_user_section_path(current_user, section)
 

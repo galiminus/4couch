@@ -5,6 +5,11 @@
       = f.text_field :username
 
   .control-group
+    = f.label :email, class: 'control-label'
+    .controls
+      = f.email_field :email
+
+  .control-group
     = f.label :locale, class: 'control-label'
     .controls
       = f.select :locale, locales_collection
