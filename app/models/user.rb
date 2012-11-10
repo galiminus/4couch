@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   attr_accessor :login
 
   has_and_belongs_to_many :communities
-  has_and_belongs_to_many :places
+  has_many :places
 
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup

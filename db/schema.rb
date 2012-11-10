@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121110012322) do
+ActiveRecord::Schema.define(:version => 20121110194850) do
 
   create_table "cities", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -47,14 +47,11 @@ ActiveRecord::Schema.define(:version => 20121110012322) do
     t.string   "city"
     t.string   "country"
     t.boolean  "gmaps"
+    t.integer  "user_id"
   end
 
   add_index "places", ["slug"], :name => "index_couches_on_slug", :unique => true
-
-  create_table "places_users", :force => true do |t|
-    t.integer "user_id",  :null => false
-    t.integer "place_id", :null => false
-  end
+  add_index "places", ["user_id"], :name => "index_places_on_user_id"
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"

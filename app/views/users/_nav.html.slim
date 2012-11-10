@@ -3,7 +3,7 @@ ul.nav.nav-tabs.nav-stacked
     = link_to @user do
       = image_tag @user.gravatar_url
       div.pull-right style="width: 170px;"
-        h2.slab= @user.username
+        h2.username.slab= @user.username
 
 - if @user == current_user
   ul.nav.nav-tabs.nav-stacked

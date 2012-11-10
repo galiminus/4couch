@@ -42,10 +42,11 @@ html lang="en"
                     ul.dropdown-menu
                       li
                         a href=user_path(current_user)
-                          - if current_user.name.present?
-                            strong= current_user.name
-                          - else
-                            strong= t :profile
+                          strong= t :profile
+                      li.divider
+                        li
+                          a
+                            My place
                       li.divider
                       li
                         = link_to t('edit.profile'), edit_user_section_path(current_user, :profile)

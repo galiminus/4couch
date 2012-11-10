@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require bootstrap_and_overrides
+ *= require slabtext
  *= gmaps4rails
  *= require_self
  */
@@ -69,6 +70,16 @@
     }
 } 
 
+h2.username.slab {
+    color: #333;
+    visibility: hidden;
+    &.slabtextdone {
+	visibility: visible;
+    }
+    .slabtext {
+	letter-spacing: 0px !important;
+    }
+}
 
 footer {
     margin-top: 20px;
