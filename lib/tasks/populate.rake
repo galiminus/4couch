@@ -24,7 +24,7 @@ namespace :db do
       place.description = Populator.sentences(2..10)
       place.created_at = 2.years.ago..Time.now
       place.latitude = rand(180) - 90
-      place.longitude = rand(180)
+      place.longitude = rand(180) - 90
       place.city = ["Paris", "Montpellier", "Le Mans", "Strasbourg", "Pau"].sample
 #      place.user_id = User.all.sample
     end
