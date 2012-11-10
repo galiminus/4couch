@@ -10,6 +10,8 @@ en:
   back: Back
   forgot_password: Forgot your password?
   search_placeholder: Search
+  goto_my_place: Go to my place
+  ready_to_host: Ready to host?
   home:
     definition:
       title: Hospitality (noun)

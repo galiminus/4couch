@@ -24,8 +24,6 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :communities
   has_many :places
 
-  before_create :create_place
-
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)

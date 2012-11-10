@@ -48,8 +48,8 @@ class UsersPlacesController < ApplicationController
 
     respond_to do |format|
       if @place.save
-        format.html { redirect_to @place, notice: 'Place was successfully created.' }
-        format.json { render json: @place, status: :created, location: @place }
+        format.html { redirect_to user_place_path(@place.user, @place), notice: 'Place was successfully created.' }
+        format.json { render json: @place, status: :created, location: user_place_path(@place.user, @place) }
       else
         format.html { render action: "new" }
         format.json { render json: @place.errors, status: :unprocessable_entity }
@@ -62,7 +62,7 @@ class UsersPlacesController < ApplicationController
 
     respond_to do |format|
       if @place.update_attributes(params[:place])
-        format.html { redirect_to @place, notice: 'Place was successfully updated.' }
+        format.html { redirect_to user_place_path(@place.user, @place), notice: 'Place was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

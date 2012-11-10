@@ -5,7 +5,7 @@ class PlacesController < ApplicationController
     @lat = params[:lat].to_f
     @lng = params[:lng].to_f
     @places = Place.all.to_gmaps4rails do |place, marker|
-      marker.json({id: place.id, link: user_place_path(place.user.id, place)})
+      marker.json({id: place.id, link: user_place_path(place.user, place)})
       marker.title place.title
     end
 
