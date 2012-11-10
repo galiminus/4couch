@@ -11,12 +11,12 @@ namespace :db do
       user.encrypted_password = "password"
     end
 
-    Community.delete_all
-    Community.populate 20 do |community|
-      community.name = Populator.words(1..3).titleize
-      community.description = Populator.sentences(2..10)
+#    Community.delete_all
+#    Community.populate 20 do |community|
+#      community.name = Populator.words(1..3).titleize
+#      community.description = Populator.sentences(2..10)
 #      community.users = User.all.sample(10)
-    end
+#    end
 
     Place.delete_all
     Place.populate 100 do |place|
@@ -26,7 +26,7 @@ namespace :db do
       place.latitude = rand(180) - 90
       place.longitude = rand(180) - 90
       place.city = ["Paris", "Montpellier", "Le Mans", "Strasbourg", "Pau"].sample
-#      place.user_id = User.all.sample
+      place.user_id = User.all.sample.id
     end
   end
 end

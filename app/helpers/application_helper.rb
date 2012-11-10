@@ -23,12 +23,4 @@ module ApplicationHelper
     redcarpet = Redcarpet::Markdown.new(renderer, extensions)
     redcarpet.render text.to_s
   end
-
-  def user_place_path(user)
-    if user.place
-      place_path(user.place)
-    else
-      new_place_path
-    end
-  end
 end

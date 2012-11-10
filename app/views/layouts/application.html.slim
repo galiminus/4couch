@@ -45,7 +45,7 @@ html lang="en"
                           strong= t :profile
                       li.divider
                         li
-                          = link_to t(:my_place), user_place_path(current_user)
+                          = link_to t(:my_place), edit_or_new_user_place_path(current_user)
                       li.divider
                       li
                         = link_to t('edit.profile'), edit_user_section_path(current_user, :profile)

@@ -20,5 +20,5 @@ class Place < ActiveRecord::Base
 
   attr_accessible :description, :title
 
-  belongs_to :users
+  belongs_to :user
 end

@@ -1,4 +1,4 @@
 p
   #map= places_map(@places, :lat => @lat, :lng => @lng)
 p.pull-right
-  a href=new_place_path Ready to host?
+  a href=edit_or_new_user_place_path(current_user) Ready to host?

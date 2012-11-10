@@ -1,4 +1,4 @@
 - content_for(:nav) do
-  = render 'users/nav'
+  = render 'users/nav', user: @user
 
 == markdown(@user.biography)

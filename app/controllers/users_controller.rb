@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @users = User.all
 
     respond_to do |format|
+      format.html
       format.json { render json: @users }
     end
   end
@@ -34,5 +35,9 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+
+    respond_to do |format|
+      format.html
+    end
   end
 end
