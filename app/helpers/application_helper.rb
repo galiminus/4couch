@@ -14,7 +14,7 @@ module ApplicationHelper
   end
 
   def current_section
-    (params[:section] || :profile).to_sym
+    (params[:section] || '').to_sym
   end
 
   def markdown(text)

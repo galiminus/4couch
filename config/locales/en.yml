@@ -1,14 +1,11 @@
 en:
   profile: Profile
   my_place: My place
-  edit_profile: Edit profile
-  edit_preferences: Settings
   sign_out: Sign-out
   sign_up: Join-us!
   sign_in: Sign-in
   site_preferences: Site preferences
   contact: Contact
-  password: Change your password
   my_informations: My informations
   back: Back
   forgot_password: Forgot your password?
@@ -32,6 +29,10 @@ en:
       update: Update
       user:
         create: Créer mon compte
+  edit:
+    profile: Edit profile
+    settings: Settings
+    password: Change your password
   footer:
     about: About
     api_documentation: API documentation

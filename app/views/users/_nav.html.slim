@@ -1,5 +1,18 @@
 ul.nav.nav-tabs.nav-stacked
-  li
-    = link_to t(:profile), user_path(current_user)
-  li
-    = link_to t(:my_place), user_places_path(current_user)
+  li.active
+    = link_to @user do
+      = image_tag @user.gravatar_url
+      div.pull-right style="width: 170px;"
+        h2.slab= @user.username
+
+- if @user == current_user
+  ul.nav.nav-tabs.nav-stacked
+    li
+      = link_to t(:my_place), user_places_path(current_user)
+    - [:profile, :settings, :password].each do |section|
+      li class=(section == current_section ? 'active' : '')
+        = link_to t("edit.#{section}"), edit_user_section_path(current_user, section)
+
+  ul.nav.nav-tabs.nav-stacked
+    li
+      = link_to t(:sign_out), destroy_user_session_path

@@ -1,14 +1,11 @@
 fr:
   profile: Profil
   my_place: Chez moi
-  edit_profile: Modifier le profil
-  edit_preferences: Compte
   sign_out: Déconnexion
   sign_up: Rejoignez-nous !
   sign_in: Connection
   site_preferences: Préférences du site
   contact: Contact
-  password: Changer le mot de passe
   my_informations: Mes informations
   back: Retour
   forgot_password: Mot de passe oublié ?
@@ -27,6 +24,10 @@ fr:
       update: Mettre à jour
       user:
         create: Créer mon compte
+  edit:
+    profile: Modifier le profil
+    settings: Paramètres du compte
+    password: Changer le mot de passe
   footer:
     about: À-propos
     api_documentation: Documentation de l'API

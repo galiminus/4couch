@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require chosen-jquery
 //= require twitter/bootstrap
 //= require_tree .
 
@@ -50,13 +49,13 @@ $(document).ready(function() {
 		    return (name);
 		});
 
-		$.get("/users", {q: query}, function(result) {
-		    users = $.map(result, function(user) {
-			return (user.username);
-		    });
-		    process(names.concat(users));
-		});
-
+		$.get("/users", {q: query},
+		      function(result) {
+			  users = $.map(result, function(user) {
+			      return (user.username);
+			  });
+			  process(names.concat(users));
+		      });
 	    });
 	},
 	updater: function(name) {
