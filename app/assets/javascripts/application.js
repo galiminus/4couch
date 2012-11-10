@@ -48,14 +48,7 @@ $(document).ready(function() {
 		    locations[name] = {lat: locality.lat, lng: locality.lng};
 		    return (name);
 		});
-
-		$.get("/users", {q: query},
-		      function(result) {
-			  users = $.map(result, function(user) {
-			      return (user.username);
-			  });
-			  process(names.concat(users));
-		      });
+		process(names);
 	    });
 	},
 	updater: function(name) {
