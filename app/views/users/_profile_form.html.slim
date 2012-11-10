@@ -1,18 +1,14 @@
-= form_for @user, html: { class: 'form-horizontal' } do |f|
-  .control-group
-    = f.label :name, class: 'control-label'
-    .controls
-      = f.text_field :name
+= form_for @user do |f|
+  = f.label :name, class: 'control-label'
+  = f.text_field :name
 
-  .control-group
-    = f.label :website, class: 'control-label'
-    .controls
-      = f.text_field :website
+  = f.label :website, class: 'control-label'
+  = f.text_field :website
 
-  .control-group
-    = f.label :biography, class: 'control-label'
-    .controls
-      = f.text_area :biography, :rows => 3
+  = f.label :biography, class: 'control-label'
+  = f.text_area :biography, :rows => 10, class: 'span5'
 
-  .form-actions
-    = f.submit class: "btn btn-primary"
+  .form-actions.btn-toolbar
+    .pull-right
+      a.btn href=user_path(@user) Cancel
+      = f.submit class: 'btn btn-primary'

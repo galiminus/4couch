@@ -1,13 +1,11 @@
-= form_for @user, html: { class: 'form-horizontal' } do |f|
-  .control-group
-    = f.label :username, class: 'control-label'
-    .controls
-      = f.text_field :username
+= form_for @user do |f|
+  = f.label :username, class: 'control-label'
+  = f.text_field :username
 
-  .control-group
-    = f.label :email, class: 'control-label'
-    .controls
-      = f.email_field :email
+  = f.label :email, class: 'control-label'
+  = f.email_field :email
 
-  .form-actions
-    = f.submit class: "btn btn-primary"
+  .form-actions.btn-toolbar
+    .pull-right
+      a.btn href=user_path(@user) Cancel
+      = f.submit class: 'btn btn-primary'

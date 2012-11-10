@@ -48,9 +48,9 @@ html lang="en"
                             strong= t :profile
                       li.divider
                       li
-                        = link_to t(:edit_profile), edit_user_section_path(current_user, :profile)
+                        = link_to t('edit.profile'), edit_user_section_path(current_user, :profile)
                       li
-                        = link_to t(:edit_preferences), edit_user_section_path(current_user, :settings)
+                        = link_to t('edit.settings'), edit_user_section_path(current_user, :settings)
                       li.divider
                       li
                         = link_to t(:sign_out), destroy_user_session_path
