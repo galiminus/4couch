@@ -16,24 +16,30 @@
 //= require_tree .
 
 $(document).ready(function() {
-    function setLinkOnMarkers() {
+
+    function setMarkerLink(marker) {
+	google.maps.event.
+	    addListener(marker.serviceObject,
+			'click',
+			function() {
+			    window.location = marker.link;
+			});
+
+    }
+
+    function setMarkersLinks() {
         for (var i = 0; i <  Gmaps.map.markers.length; ++i) {
 	    marker = Gmaps.map.markers[i];
 	    if (!marker.link) {
 		return;
 	    }
-	    google.maps.event.
-		addListener(marker.serviceObject,
-			    'click',
-			    function() {
-				window.location = marker.link;
-			    });
+	    setMarkerLink(marker);
         }
     }
 
     if (Gmaps.map) {
 	Gmaps.map.callback = function() {
-	    setLinkOnMarkers();
+	    setMarkersLinks();
 	}
     }
 
