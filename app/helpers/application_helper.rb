@@ -16,4 +16,11 @@ module ApplicationHelper
   def current_section
     (params[:section] || :profile).to_sym
   end
+
+  def markdown(text)
+    renderer = Redcarpet::Render::XHTML.new
+    extensions = {fenced_code_blocks: true}
+    redcarpet = Redcarpet::Markdown.new(renderer, extensions)
+    redcarpet.render text.to_s
+  end
 end
