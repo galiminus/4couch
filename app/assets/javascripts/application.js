@@ -47,14 +47,20 @@ $(document).ready(function() {
 		names = $.map(result, function(locality) {
 		    var name = locality.name + " - " + locality.admin1 + ", " + locality.country;
 		    locations[name] = {lat: locality.lat, lng: locality.lng};
-
 		    return (name);
 		});
-		process(names);
+
+		$.get("/users", {q: query}, function(result) {
+		    users = $.map(result, function(user) {
+			return (user.username);
+		    });
+		    process(names.concat(users));
+		});
+
 	    });
 	},
 	updater: function(name) {
-	    $(location).attr('href', '/places?lat=' + locations[name].lat + "&lng=" + locations[name].lng);
+	    $(location).attr('href', '/places?q=' + name + '&lat=' + locations[name].lat + "&lng=" + locations[name].lng);
 	}
     })
 });

@@ -14,6 +14,12 @@
  */
 
 
+.typeahead.dropdown-menu {
+    li {
+	min-width: 300px;
+    }
+}
+
 .navbar {
     .navbar-inner {
 	border-radius: 0px;
