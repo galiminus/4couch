@@ -6,6 +6,7 @@ module HomeHelper
               type: "ROADMAP",
               auto_adjust: false,
               zoom: 2,
+              minZoom: 2,
               center_latitude: 30.769569,
               center_longitude: 5.730057,
               raw: "{
