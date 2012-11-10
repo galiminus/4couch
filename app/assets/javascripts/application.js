@@ -43,7 +43,7 @@ $(document).ready(function() {
 	minLength: 3,
 	items: 20,
 	source: function(query, process) {
-	    $.get("/places", {q: query}, function(result) {
+	    $.get("/cities", {q: query}, function(result) {
 		names = $.map(result, function(locality) {
 		    var name = locality.name + " - " + locality.admin1 + ", " + locality.country;
 		    locations[name] = {lat: locality.lat, lng: locality.lng};
@@ -54,7 +54,7 @@ $(document).ready(function() {
 	    });
 	},
 	updater: function(name) {
-	    $(location).attr('href', '/couches?lat=' + locations[name].lat + "&lng=" + locations[name].lng);
+	    $(location).attr('href', '/places?lat=' + locations[name].lat + "&lng=" + locations[name].lng);
 	}
     })
 });

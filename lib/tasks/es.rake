@@ -7,7 +7,7 @@ namespace :es do
   end
 
   task :drop => :init do
-    RestClient.delete 'http://localhost:9200/couches/'
+    RestClient.delete 'http://localhost:9200/places/'
     RestClient.delete 'http://localhost:9200/communities/'
   end
 end

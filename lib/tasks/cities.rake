@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-namespace :places do
+namespace :cities do
   task :init => :environment do
   end
 
@@ -44,14 +44,14 @@ namespace :places do
       lat = infos[4]
       lng = infos[5]
 
-      Place.create(:id => id,
-                   :name => name,
-                   :admin1 => admin1["#{country_code}.#{admin1_code}"],
-                   :admin2 => admin2["#{country_code}.#{admin1_code}.#{admin2_code}"],
-                   :country => countries[country_code],
-                   :population => population,
-                   :lat => lat,
-                   :lng => lng)
+      City.create(:id => id,
+                  :name => name,
+                  :admin1 => admin1["#{country_code}.#{admin1_code}"],
+                  :admin2 => admin2["#{country_code}.#{admin1_code}.#{admin2_code}"],
+                  :country => countries[country_code],
+                  :population => population,
+                  :lat => lat,
+                  :lng => lng)
     end
   end
 end

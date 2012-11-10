@@ -1,8 +1,0 @@
-.row
-  .span12
-    ul
-      - @communities.each do |community|
-        li= link_to community.name, community_path(community.slug)
-    ul
-      - @couches.each do |couch|
-        li= couch.title

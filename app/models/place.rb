@@ -1,28 +1,24 @@
-class Place
-  def self.create(params = {})
-    Tire.index 'places' do
-      store({
-              :id               => params[:id],
-              :name             => params[:name],
-              :admin1           => params[:admin1],
-              :admin2           => params[:admin2],
-              :country          => params[:country],
-              :population       => params[:population].to_i,
-              :lat              => params[:lat].to_f,
-              :lng              => params[:lng].to_f
-      })
+class Place < ActiveRecord::Base
+  include Tire::Model::Search
+  include Tire::Model::Callbacks
 
-      refresh
-    end
+  acts_as_gmappable
+
+  def gmaps4rails_address
+    "#{self.city}, #{self.country}"
   end
 
-  def self.search(query_string, options = {})
-    query_string ||= '*'
-    Tire.search 'places' do
-      query do
-        string query_string, :default_operator => 'AND'
-      end
-      sort { by :population, 'desc' }
-    end.results
+  mapping do
+    indexes :id,           :index    => :not_analyzed
+    indexes :slug,         :index    => :not_analyzed
+    indexes :title,        :analyzer => 'snowball', :boost => 100
+    indexes :description,  :analyzer => 'snowball'
   end
+
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
+  attr_accessible :description, :title
+
+  has_and_belongs_to_many :users
 end

@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121108204307) do
+ActiveRecord::Schema.define(:version => 20121109234523) do
+
+  create_table "cities", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+    t.float    "lat"
+    t.float    "lng"
+  end
 
   create_table "communities", :force => true do |t|
     t.string   "name"
@@ -28,7 +36,12 @@ ActiveRecord::Schema.define(:version => 20121108204307) do
     t.integer "community_id", :null => false
   end
 
-  create_table "couches", :force => true do |t|
+  create_table "couches_users", :force => true do |t|
+    t.integer "user_id",  :null => false
+    t.integer "couch_id", :null => false
+  end
+
+  create_table "places", :force => true do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at",  :null => false
@@ -40,12 +53,7 @@ ActiveRecord::Schema.define(:version => 20121108204307) do
     t.string   "country"
   end
 
-  add_index "couches", ["slug"], :name => "index_couches_on_slug", :unique => true
-
-  create_table "couches_users", :force => true do |t|
-    t.integer "user_id",  :null => false
-    t.integer "couch_id", :null => false
-  end
+  add_index "places", ["slug"], :name => "index_couches_on_slug", :unique => true
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"

@@ -1,9 +1,9 @@
-class UsersCouchesController < ApplicationController
+class UsersPlacesController < ApplicationController
   before_filter :load_user
 
   def index
     @user = User.find(params[:user_id])
-    @couches = @user.couches
+    @places = @user.places
   end
 
   protected

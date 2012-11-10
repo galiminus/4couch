@@ -1,7 +1,7 @@
 module HomeHelper
-  def home_map(couches)
+  def home_map(places)
     gmaps({
-            markers: { data: couches },
+            markers: { data: places },
             map_options: {
               type: "ROADMAP",
               auto_adjust: false,

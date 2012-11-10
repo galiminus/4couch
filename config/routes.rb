@@ -4,15 +4,14 @@ FourCouch::Application.routes.draw do
   match "/users/:id/edit/:section" => "users#edit", :via => :get
   resources :users do
     resources :communities, :controller => 'users_communities'
-    resources :couches, :controller => 'users_couches'
+    resources :places, :controller => 'users_places'
   end
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  resources :couches
+  resources :places
   resources :communities
-  resources :places, :only => [:index]
+  resources :cities, :only => [:index]
 
   root :to => 'home#index'
-  get  'search' => 'home#search'
 end

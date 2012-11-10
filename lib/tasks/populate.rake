@@ -4,7 +4,7 @@ namespace :db do
     require 'populator'
     require 'faker'
 
-    User.delete_all
+#    User.delete_all
     User.populate 2 do |user|
       user.email = Faker::Internet.email
       user.username = Populator.words(1).titleize
@@ -18,15 +18,15 @@ namespace :db do
 #      community.users = User.all.sample(10)
     end
 
-    Couch.delete_all
-    Couch.populate 100 do |couch|
-      couch.title = Populator.words(1..3).titleize
-      couch.description = Populator.sentences(2..10)
-      couch.created_at = 2.years.ago..Time.now
-      couch.latitude = rand(180) - 90
-      couch.longitude = rand(180)
-      couch.city = ["Paris", "Montpellier", "Le Mans", "Strasbourg", "Pau"].sample
-#      couch.user_id = User.all.sample
+    Place.delete_all
+    Place.populate 100 do |place|
+      place.title = Populator.words(1..3).titleize
+      place.description = Populator.sentences(2..10)
+      place.created_at = 2.years.ago..Time.now
+      place.latitude = rand(180) - 90
+      place.longitude = rand(180)
+      place.city = ["Paris", "Montpellier", "Le Mans", "Strasbourg", "Pau"].sample
+#      place.user_id = User.all.sample
     end
   end
 end
