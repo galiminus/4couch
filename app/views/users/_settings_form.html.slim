@@ -9,10 +9,5 @@
     .controls
       = f.email_field :email
 
-  .control-group
-    = f.label :locale, class: 'control-label'
-    .controls
-      = f.select :locale, locales_collection
-
   .form-actions
     = f.submit class: "btn btn-primary"
