@@ -12,7 +12,7 @@ fr:
   my_informations: Mes informations
   back: Retour
   forgot_password: Mot de passe oublié ?
-  search_placeholder: Rechercher ...
+  search_placeholder: Rechercher
   simple_form:
     labels:
       user:
