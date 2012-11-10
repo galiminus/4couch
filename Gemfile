@@ -27,6 +27,8 @@ gem 'gmaps4rails'
 
 gem 'redis-rails'
 
+gem 'redcarpet'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

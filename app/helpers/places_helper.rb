@@ -24,4 +24,11 @@ module PlacesHelper
     gmaps(markers: { data: places }, map_options: map_options)
 
   end
+
+  def markdown(text)
+    renderer = Redcarpet::Render::XHTML.new
+    extensions = {fenced_code_blocks: true}
+    redcarpet = Redcarpet::Markdown.new(renderer, extensions)
+    redcarpet.render text
+  end
 end
