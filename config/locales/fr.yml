@@ -10,6 +10,9 @@ fr:
   back: Retour
   forgot_password: Mot de passe oublié ?
   search_placeholder: Rechercher
+  goto_my_place: Voir mon logement
+  ready_to_host: Vous souhaitez héberger ?
+  world_map: Carte du monde
   simple_form:
     labels:
       user:
