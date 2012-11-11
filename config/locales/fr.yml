@@ -28,6 +28,7 @@ fr:
       user:
         create: Créer mon compte
   edit:
+    my_place: Modifier mon logement
     profile: Modifier le profil
     settings: Paramètres du compte
     password: Changer le mot de passe

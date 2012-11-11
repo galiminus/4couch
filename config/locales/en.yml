@@ -33,6 +33,7 @@ en:
       user:
         create: Créer mon compte
   edit:
+    my_place: Edit my place
     profile: Edit profile
     settings: Settings
     password: Change your password

@@ -8,7 +8,7 @@ ul.nav.nav-tabs.nav-stacked
 - if @user == current_user
   ul.nav.nav-tabs.nav-stacked
     li
-      = link_to t(:my_place), edit_or_new_user_place_path(@user)
+      = link_to t('edit.my_place'), edit_or_new_user_place_path(@user)
 
   ul.nav.nav-tabs.nav-stacked
     - [:profile, :settings, :password].each do |section|
