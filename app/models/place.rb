@@ -11,10 +11,7 @@ class Place < ActiveRecord::Base
     indexes :description,  :analyzer => 'snowball'
   end
 
-  extend FriendlyId
-  friendly_id :title, use: :slugged
-
-  attr_accessible :description, :title
+  attr_accessible :description, :title, :latitude, :longitude, :user
 
   belongs_to :user
 end

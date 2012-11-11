@@ -1,7 +1,7 @@
 module UsersHelper  
   def edit_or_new_user_place_path(user)
     if user.place
-      edit_user_place_path(user, user.place)
+      edit_user_place_path(user)
     else
       new_user_place_path(user)
     end

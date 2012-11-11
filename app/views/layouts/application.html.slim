@@ -41,7 +41,7 @@ html lang="en"
               - if user_signed_in?
                 - if current_user.place.present?
                   li class=active_in_my_place(current_user, @place)
-                    a href=user_place_path(current_user, current_user.place) = t :my_place
+                    a href=user_place_path(current_user) = t :my_place
                 - else
                   li class=active_in_create_place
                     a href=edit_or_new_user_place_path(current_user) = t 'create.my_place'
