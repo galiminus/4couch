@@ -11,13 +11,6 @@ namespace :db do
       user.encrypted_password = "password"
     end
 
-#    Community.delete_all
-#    Community.populate 20 do |community|
-#      community.name = Populator.words(1..3).titleize
-#      community.description = Populator.sentences(2..10)
-#      community.users = User.all.sample(10)
-#    end
-
     Place.delete_all
     Place.populate 100 do |place|
       place.title = Populator.words(1..3).titleize

@@ -1,2 +1,0 @@
-- content_for(:nav) do
-  = render 'users/nav'
