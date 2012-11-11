@@ -24,6 +24,7 @@ gem 'kaminari'
 gem 'paperclip'
 
 gem 'gmaps4rails'
+gem 'google-analytics-rails'
 
 gem 'redis-rails'
 

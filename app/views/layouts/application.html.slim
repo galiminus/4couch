@@ -19,6 +19,8 @@ html lang="en"
     link href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed"
     link href="images/favicon.ico" rel="shortcut icon"
 
+    = analytics_init if Rails.env.production?
+
   body
     .navbar
       .navbar-inner
