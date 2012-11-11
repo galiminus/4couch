@@ -67,14 +67,15 @@ html lang="en"
                   a href=new_user_registration_path = t :sign_up
                 li class=active_in_sign_in
                   a href=new_user_session_path = t :sign_in
+    .surround
     .container.main
       .row
         - if content_for?(:breadcrumb)
-          .span8.offset2
+          .span8.offset1
             = content_for(:breadcrumb)
 
         - if content_for?(:nav)
-          #nav.span3.offset2
+          #nav.span3.offset1
             = content_for(:nav)
           #content.span5
             = yield
@@ -82,10 +83,10 @@ html lang="en"
           #content
             = yield
         - else
-          #content.span8.offset2
+          #content.span8.offset1
             = yield
       .row
-        .span8.offset2
+        .span8.offset1
           footer
             ul.breadcrumb
               li

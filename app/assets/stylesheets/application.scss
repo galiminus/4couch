@@ -14,73 +14,79 @@
  *= require_self
  */
 
+html {
+    height: 100%;
 
-.typeahead.dropdown-menu {
-    li {
-	min-width: 300px;
-    }
-}
+    body {
+	background-image: url(/assets/stripes.png);
+	height: 100%;
 
-.navbar {
-    .navbar-inner {
-	border-radius: 0px;
-    }
-    .brand {
-	font-size: 40px;
-	color: #eee;
-	letter-spacing: 8px;
-	&:first-letter {
-	    color: #B33;
+	.navbar {
+	    margin-bottom: 0px;
+
+	    .navbar-inner {
+		border-radius: 0px;
+
+		.brand {
+		    font-size: 40px;
+		    color: #eee;
+		    letter-spacing: 8px;
+		    &:first-letter {
+			color: #B33;
+		    }
+		}
+		.typeahead.dropdown-menu {
+		    li {
+			min-width: 300px;
+		    }
+		}
+		#user-nav-container {
+		    padding-right: 0px;
+		    li > a.user-nav-link {
+			padding: 8px 12px 8px 12px;
+			> img {
+			    width: 64px;
+			    height: 64px;
+			    margin-left: 12px;
+			    border-radius: 4px;
+			}
+		    }
+		}
+	    }
+	}
+	
+	.container.main {
+	    background: #FFF;
+	    width: 960px;
+	    min-height: 100%;
+
+	    h2.username.slab {
+		color: #333;
+		visibility: hidden;
+		&.slabtextdone {
+		    visibility: visible;
+		}
+		.slabtext {
+		    letter-spacing: 0px !important;
+		}
+	    }
+
+	    #map {
+		height: 400px;
+		border: 2px solid #333;
+		border-radius: 2px;
+
+		img { 
+		    max-width: none;
+		}
+		label { 
+		    width: auto; display:inline; 
+		}
+	    } 
+	}
+	footer {
+	    margin-top: 20px;
 	}
     }
 }
 
-#user-nav-container {
-    padding-right: 0px;
-    li > a.user-nav-link {
-	padding: 8px 12px 8px 12px;
-	> img {
-	    width: 64px;
-	    height: 64px;
-	    margin-left: 12px;
-	    border-radius: 4px;
-	}
-    }
-}
-
-.container.main {
-    padding-top: 10px;
-    background: #FFF;
-}
-
-#nav {
-    background: #FFF;
-}
-
-#map {
-    height: 400px;
-    border: 2px solid #333;
-    border-radius: 2px;
-
-    img { 
-	max-width: none;
-    }
-    label { 
-	width: auto; display:inline; 
-    }
-} 
-
-h2.username.slab {
-    color: #333;
-    visibility: hidden;
-    &.slabtextdone {
-	visibility: visible;
-    }
-    .slabtext {
-	letter-spacing: 0px !important;
-    }
-}
-
-footer {
-    margin-top: 20px;
-}
