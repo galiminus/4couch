@@ -63,6 +63,10 @@ html lang="en"
                     a href=new_user_session_path = t :sign_in
     .container.main
       .row
+        - if content_for?(:breadcrumb)
+          .span8.offset2
+            = content_for(:breadcrumb)
+
         - if content_for?(:nav)
           #nav.span3.offset2
             = content_for(:nav)
