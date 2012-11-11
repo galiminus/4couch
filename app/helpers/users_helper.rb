@@ -6,4 +6,9 @@ module UsersHelper
       new_user_place_path(user)
     end
   end
+
+  def in_new_or_edit_user_place?
+    params[:controller] == 'users_places' &&
+      ['new', 'edit'].include?(params[:action])
+  end
 end
