@@ -1,5 +1,7 @@
 module HomeHelper
-  def home_map(places)
+  def home_map(places_objects)
+    places = places_to_map(places_objects)
+
     gmaps({
             markers: { data: places },
             map_options: {
