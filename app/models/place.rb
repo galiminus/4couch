@@ -11,7 +11,17 @@ class Place < ActiveRecord::Base
     indexes :description,  :analyzer => 'snowball'
   end
 
-  attr_accessible :description, :title, :latitude, :longitude, :user
+  attr_accessible :description, :title, :latitude, :longitude, :user, :city
 
   belongs_to :user
+
+  before_update :get_city_informations
+
+  def get_city_informations
+    city = City.search("#{self.city}*").first
+
+    self.city = "#{city.name} - #{city.admin1}, #{city.country}"
+    self.latitude = city.lat
+    self.longitude = city.lng
+  end
 end
