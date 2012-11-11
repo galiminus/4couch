@@ -25,4 +25,8 @@ module PlacesHelper
     gmaps(markers: { data: places }, map_options: map_options)
 
   end
+
+  def active_in_world_map
+    'active' if params[:controller] == 'places' && params[:action] == 'index'
+  end
 end

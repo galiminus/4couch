@@ -31,7 +31,7 @@ en:
     submit:
       update: Update
       user:
-        create: Créer mon compte
+        create: Sign-up
   edit:
     my_place: Edit my place
     profile: Edit my profile

@@ -23,8 +23,4 @@ module ApplicationHelper
     redcarpet = Redcarpet::Markdown.new(renderer, extensions)
     redcarpet.render text.to_s
   end
-
-  def in_world_map?
-    params[:controller] == 'places' && params[:action] == 'index'
-  end
 end

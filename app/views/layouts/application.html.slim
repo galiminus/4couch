@@ -36,20 +36,20 @@ html lang="en"
                 form.navbar-search.pull-left action=places_path
                   input#search.search-query.span3 type="text" placeholder=@search_placeholder name="q"
             ul.nav
-              li class=(in_world_map? ? 'active' : '')
+              li class=active_in_world_map
                 a href=places_path = t :world_map
               - if user_signed_in?
                 - if current_user.place.present?
-                  li class=(@place.present? && current_user.place == @place ? 'active' : '')
+                  li class=active_in_my_place?(current_user, @place)
                     a href=user_place_path(current_user, current_user.place) = t :my_place
                 - else
-                  li
+                  li class=active_in_create_place
                     a href=edit_or_new_user_place_path(current_user) = t 'create.my_place'
 
             ul#user-nav-container.nav.pull-right
               li.divider-vertical
               - if user_signed_in?
-                li class=(in_user?(current_user) ? 'dropdown active' : 'dropdown')
+                li class="dropdown #{active_in_user(current_user)}"
                   = link_to "#", class: 'dropdown-toggle user-nav-link visible-desktop', data: {toggle: 'dropdown'} do
                     span= current_user.username
                     = image_tag current_user.gravatar_url
@@ -70,9 +70,9 @@ html lang="en"
                     li
                       = link_to t(:sign_out), destroy_user_session_path
               - else
-                li
+                li class=active_in_sign_up
                   a href=new_user_registration_path = t :sign_up
-                li
+                li class=active_in_sign_in
                   a href=new_user_session_path = t :sign_in
     .container.main
       .row
