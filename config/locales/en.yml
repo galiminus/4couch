@@ -37,6 +37,8 @@ en:
     profile: Edit profile
     settings: Settings
     password: Change your password
+  create:
+    my_place: Create my place
   footer:
     about: About
     api_documentation: API documentation

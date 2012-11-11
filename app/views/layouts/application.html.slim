@@ -38,8 +38,13 @@ html lang="en"
               li
                 a href=places_path = t :world_map
               - if user_signed_in?
-                li
-                  a href=user_place_path(current_user, current_user.place) = t :my_place
+                - if !current_user.place.present?
+                  li
+                    a href=user_place_path(current_user, current_user.place) = t :my_place
+                - else
+                  li
+                    a href=edit_or_new_user_place_path(current_user) = t 'create.my_place'
+
             ul#user-nav-container.nav.pull-right
               li.divider-vertical
               - if user_signed_in?

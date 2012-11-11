@@ -1,9 +1,2 @@
 p
   #map= places_map(@places, lat: @lat, lng: @lng)
-
-- if user_signed_in?
-  p.pull-right
-    - if current_user.place.present?
-      a href=user_place_path(current_user, current_user.place) = t :goto_my_place
-    - else
-      a href=edit_or_new_user_place_path(current_user) = t :ready_to_host

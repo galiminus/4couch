@@ -32,6 +32,8 @@ fr:
     profile: Modifier le profil
     settings: Paramètres du compte
     password: Changer le mot de passe
+  create:
+    my_place: Ajouter mon logement
   footer:
     about: À-propos
     api_documentation: Documentation de l'API
