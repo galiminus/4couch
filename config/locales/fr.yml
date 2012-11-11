@@ -1,5 +1,5 @@
 fr:
-  profile: Profil
+  profile: Mon profil
   my_place: Chez moi
   sign_out: Déconnexion
   sign_up: Rejoignez-nous !
@@ -29,7 +29,7 @@ fr:
         create: Créer mon compte
   edit:
     my_place: Modifier mon logement
-    profile: Modifier le profil
+    profile: Modifier mon profil
     settings: Paramètres du compte
     password: Changer le mot de passe
   create:

@@ -11,4 +11,9 @@ module UsersHelper
     params[:controller] == 'users_places' &&
       ['new', 'edit'].include?(params[:action])
   end
+
+  def in_user?(user)
+    params[:controller] == 'users' &&
+      @user.present? && @user == current_user
+  end
 end

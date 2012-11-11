@@ -49,7 +49,7 @@ html lang="en"
             ul#user-nav-container.nav.pull-right
               li.divider-vertical
               - if user_signed_in?
-                li.dropdown
+                li class=(in_user?(current_user) ? 'dropdown active' : 'dropdown')
                   = link_to "#", class: 'dropdown-toggle user-nav-link visible-desktop', data: {toggle: 'dropdown'} do
                     span= current_user.username
                     = image_tag current_user.gravatar_url

@@ -1,5 +1,5 @@
 en:
-  profile: Profile
+  profile: My profile
   my_place: My place
   sign_out: Sign-out
   sign_up: Join-us!
@@ -34,7 +34,7 @@ en:
         create: Créer mon compte
   edit:
     my_place: Edit my place
-    profile: Edit profile
+    profile: Edit my profile
     settings: Settings
     password: Change your password
   create:
