@@ -40,7 +40,7 @@ html lang="en"
                 a href=places_path = t :world_map
               - if user_signed_in?
                 - if current_user.place.present?
-                  li class=active_in_my_place?(current_user, @place)
+                  li class=active_in_my_place(current_user, @place)
                     a href=user_place_path(current_user, current_user.place) = t :my_place
                 - else
                   li class=active_in_create_place
