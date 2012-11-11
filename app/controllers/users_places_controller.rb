@@ -45,6 +45,7 @@ class UsersPlacesController < ApplicationController
 
   def create
     @place = Place.new(params[:place])
+    @place.user_id = @user.id
 
     respond_to do |format|
       if @place.save

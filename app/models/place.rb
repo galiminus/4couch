@@ -2,11 +2,7 @@ class Place < ActiveRecord::Base
   include Tire::Model::Search
   include Tire::Model::Callbacks
 
-  acts_as_gmappable
-
-  def gmaps4rails_address
-    "#{self.city}, #{self.country}"
-  end
+  acts_as_gmappable process_geocoding: false, validation: false
 
   mapping do
     indexes :id,           :index    => :not_analyzed
