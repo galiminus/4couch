@@ -1,9 +1,7 @@
 class PlacesController < ApplicationController
-  before_filter :authenticate_user!
-
   def index
-    @lat = params[:lat].to_f
-    @lng = params[:lng].to_f
+    @lat = params[:lat]
+    @lng = params[:lng]
     @places = Place.all
 
     respond_to do |format|

@@ -72,16 +72,16 @@ html {
 		}
 	    }
 
-	    #map {
-		height: 340px;
-		border: 2px solid #333;
+	    .map {
+		border: 3px solid #333;
 		border-radius: 2px;
 
 		img { 
 		    max-width: none;
 		}
 		label { 
-		    width: auto; display:inline; 
+		    width: auto;
+		    display:inline; 
 		}
 	    } 
 	}

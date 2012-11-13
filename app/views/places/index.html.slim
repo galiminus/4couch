@@ -1,2 +1,5 @@
 p
-  #map= places_map(@places, lat: @lat, lng: @lng)
+  - if @lat.present? && @lng.present?
+    #places-map.map data-lat=@lat.to_f data-lng=@lng.to_f
+  - else
+    #places-map.map

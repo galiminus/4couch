@@ -21,5 +21,10 @@ ul.nav.nav-tabs.nav-stacked
       = link_to t(:sign_out), destroy_user_session_path
 - else
   ul.nav.nav-tabs.nav-stacked
+    - if @place.present?
+      li
+        #map= places_map([@place], lat: @place.latitude, lng: @place.longitude)
+
+  ul.nav.nav-tabs.nav-stacked
     li
       = link_to t(:contact), user_path(@user)

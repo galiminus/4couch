@@ -13,10 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require_tree .
 
 $(document).ready(function() {
-
+/*
     function setMarkerLink(marker) {
 	google.maps.event.
 	    addListener(marker.serviceObject,
@@ -42,7 +41,7 @@ $(document).ready(function() {
 	    setMarkersLinks();
 	}
     }
-
+*/
     var locations = {};
     $(".search-query").typeahead({
 	minLength: 3,
