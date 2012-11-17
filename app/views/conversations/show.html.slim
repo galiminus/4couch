@@ -1,0 +1,18 @@
+- content_for(:nav) do
+  = render 'conversations/nav'
+
+- if @conversation.messages.any?
+  ul.media-list
+    - @conversation.messages.each do |message|
+      li.media
+        - if @user == message.user
+          a.pull-right href="#"
+            = image_tag message.user.gravatar_url size: 64, class: "media-object"
+          .media-body.pull-right
+            == markdown(message.body)
+        - else
+          a.pull-left href="#"
+            = image_tag message.user.gravatar_url size: 64, class: "media-object"
+          .media-body.pull-left
+            == markdown(message.body)
+= render 'messages/form'

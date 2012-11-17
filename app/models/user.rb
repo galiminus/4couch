@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   attr_accessor :login
 
   has_one :place
+  has_many :conversations
 
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup

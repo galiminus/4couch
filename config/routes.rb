@@ -3,6 +3,14 @@ FourCouch::Application.routes.draw do
 
   match "/users/:id/edit/:section" => "users#edit", :via => :get
   resources :users do
+
+    match "/conversations/:recipient_id" => "conversations#show", :via => :get
+    match "/conversations/:recipient_id/messages" => "messages#create", :via => :post
+
+    resources :conversations, :only => [:show, :index] do
+      resources :messages, :only => [:create]
+    end
+
     resource :place, :controller => 'users_places'
   end
 

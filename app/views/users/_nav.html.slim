@@ -1,9 +1,9 @@
 ul.nav.nav-tabs.nav-stacked
   li class=active_in_user(@user)
     = link_to @user do
-      = image_tag @user.gravatar_url
-      div.pull-right style="width: 170px;"
-        h2.username.slab= @user.username
+      = image_tag @user.gravatar_url size: 32
+      div.pull-right
+        strong= @user.username
 
 - if @user == current_user
   - if @user.place.present?
@@ -27,4 +27,4 @@ ul.nav.nav-tabs.nav-stacked
 
   ul.nav.nav-tabs.nav-stacked
     li
-      = link_to t(:contact), user_path(@user)
+      = link_to t(:send_a_message), user_conversation_path(current_user, @user)

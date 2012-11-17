@@ -1,14 +1,14 @@
 = form_for @place, url: user_place_path(@user) do |f|
-  = f.label :title, :class => 'control-label'
+  = f.label :title, class: 'control-label'
   = f.text_field :title
 
   = f.label :city
   = f.text_field :city
 
-  = f.label :description, :class => 'control-label' do
+  = f.label :description, class: 'control-label' do
     span= t :description
     = render 'application/markdown_link'
-  = f.text_area :description, :rows => 10, :class => 'span7'
+  = f.text_area :description, rows: 10, :class => 'span7'
 
   .form-actions.btn-toolbar
     .pull-right

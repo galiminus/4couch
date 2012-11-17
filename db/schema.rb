@@ -11,15 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121111184324) do
-
-  create_table "cities", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-    t.string   "name"
-    t.float    "lat"
-    t.float    "lng"
-  end
+ActiveRecord::Schema.define(:version => 20121117223817) do
 
   create_table "communities", :force => true do |t|
     t.string   "name"
@@ -35,6 +27,24 @@ ActiveRecord::Schema.define(:version => 20121111184324) do
     t.integer "user_id",      :null => false
     t.integer "community_id", :null => false
   end
+
+  create_table "conversations", :force => true do |t|
+    t.integer  "user_id",      :null => false
+    t.integer  "recipient_id", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "messages", :force => true do |t|
+    t.text     "body"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "conversation_id"
+    t.integer  "user_id"
+  end
+
+  add_index "messages", ["conversation_id"], :name => "index_messages_on_conversation_id"
+  add_index "messages", ["user_id"], :name => "index_messages_on_user_id"
 
   create_table "places", :force => true do |t|
     t.string   "title"

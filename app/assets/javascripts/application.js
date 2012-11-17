@@ -60,4 +60,6 @@ $(document).ready(function() {
 	    $(location).attr('href', '/places?q=' + name + '&lat=' + locations[name].lat + "&lng=" + locations[name].lng);
 	}
     })
+
+    $('.dropdown-toggle').dropdown();
 });
