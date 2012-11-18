@@ -8,25 +8,19 @@ gem 'rails', '3.2.8'
 gem 'slim'
 gem "slim-rails"
 gem 'pg'
-
 gem 'devise'
 gem 'gravtastic'
 gem 'friendly_id'
-
 gem 'rails_admin'
-
+gem 'cancan'
 gem 'sitemap'
 gem 'simple_form'
-
 gem 'tire'
 gem 'curb'
 gem 'kaminari'
 gem 'paperclip'
-
 gem 'google-analytics-rails'
-
 gem 'redis-rails'
-
 gem 'redcarpet'
 
 # Gems used only for assets and not required
@@ -46,13 +40,15 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
+  gem "simplecov"
+  gem "fabrication"
+  gem 'faker'
+  gem 'populator'
 end
 
 group :development do
   gem 'capistrano-af83'
   gem 'rvm-capistrano'
-  gem 'populator'
-  gem 'faker'
 end
 
 gem 'thin'

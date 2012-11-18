@@ -19,6 +19,7 @@ class User < ActiveRecord::Base
 
   has_one :place
   has_many :conversations
+  has_many :messages
 
   def new_messages?
     conversations.where(read: false).count.nonzero?

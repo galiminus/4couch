@@ -4,7 +4,7 @@ class Conversation < ActiveRecord::Base
 
   has_many :messages
 
-  attr_accessible :recipient, :user, :read
+  attr_accessible :user, :recipient, :read
 
   def read!
     update_attributes(read: true)
