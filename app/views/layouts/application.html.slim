@@ -59,8 +59,9 @@ html lang="en"
                     li
                       a href=user_path(current_user)
                         strong= t :profile
-                    li
-                      = link_to "Conversations", user_conversations_path(current_user)
+                    - unless current_user.conversations.count.zero?
+                      li
+                        = link_to "Conversations", user_conversations_path(current_user)
                     li.divider
                     li
                       = link_to t('edit.settings'), edit_user_section_path(current_user, :settings)
