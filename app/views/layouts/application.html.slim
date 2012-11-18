@@ -54,7 +54,7 @@ html lang="en"
                 - if current_user.new_messages?
                   li
                     a href=user_conversations_path(current_user)
-                      span.label.label-important t(:new_messages)
+                      span.label.label-important= t(:new_messages)
                 li class="dropdown #{active_in_user(current_user)}"
                   = link_to "#", class: 'dropdown-toggle user-nav-link visible-desktop', data: {toggle: 'dropdown'} do
                     span= current_user.username
