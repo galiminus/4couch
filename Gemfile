@@ -44,12 +44,15 @@ end
 
 gem 'jquery-rails'
 
+group :test, :development do
+  gem "rspec-rails", "~> 2.0"
+end
+
 group :development do
   gem 'capistrano-af83'
   gem 'rvm-capistrano'
   gem 'populator'
   gem 'faker'
-  gem 'rspec-rails'
 end
 
 gem 'thin'

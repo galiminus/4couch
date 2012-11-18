@@ -282,7 +282,7 @@ DEPENDENCIES
   rails_admin
   redcarpet
   redis-rails
-  rspec-rails
+  rspec-rails (~> 2.0)
   rvm-capistrano
   sass-rails (~> 3.2.3)
   simple_form
