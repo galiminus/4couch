@@ -43,7 +43,7 @@ $(document).ready(function() {
     }
 */
     var locations = {};
-    $(".search-query").typeahead({
+    $(".search-city").typeahead({
 	minLength: 3,
 	items: 20,
 	source: function(query, process) {
@@ -57,7 +57,11 @@ $(document).ready(function() {
 	    });
 	},
 	updater: function(name) {
-	    $(location).attr('href', '/places?q=' + name + '&lat=' + locations[name].lat + "&lng=" + locations[name].lng);
+	    if (this.$element.data('forward') == 'true') {
+		$(location).attr('href', '/places?q=' + name + '&lat=' + locations[name].lat + "&lng=" + locations[name].lng);
+	    } else {
+		return (name);
+	    }
 	}
     })
 

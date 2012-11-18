@@ -36,7 +36,7 @@ html lang="en"
             ul.nav
               li
                 form.navbar-search.pull-left action=places_path
-                  input#search.search-query.span3 type="text" placeholder=@search_placeholder name="q"
+                  input#search.search-query.search-city.span3 type="text" placeholder=@search_placeholder name="q" data-forward="true"
             ul.nav
               li class=active_in_world_map
                 a href=places_path = t :world_map
@@ -76,7 +76,6 @@ html lang="en"
                   a href=new_user_registration_path = t :sign_up
                 li class=active_in_sign_in
                   a href=new_user_session_path = t :sign_in
-    .surround
     .container.main
       .row
         - if content_for?(:breadcrumb)
