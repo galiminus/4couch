@@ -3,12 +3,10 @@ class MessagesController < ApplicationController
     user = User.find(params[:user_id])
     recipient = User.find(params[:recipient_id])
 
-    respond_to do |format|
-      if Message.create_with_conversations(params[:message], user, recipient)
-        format.html { redirect_to user_conversations_path(user) }
-      else
+    Message.create_with_conversations(params[:message], user, recipient)
 
-      end
+    respond_to do |format|
+      format.html { redirect_to user_conversations_path(user) }
     end
   end
 end

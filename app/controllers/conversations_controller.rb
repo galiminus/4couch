@@ -12,6 +12,8 @@ class ConversationsController < ApplicationController
   def show
     @conversation =
       Conversation.where(user_id: @user, recipient_id: @recipient).first_or_initialize
+    @conversation.read!
+
     @message = Message.new(conversation: @conversation)
 
     respond_to do |format|

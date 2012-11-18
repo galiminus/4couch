@@ -20,6 +20,10 @@ class User < ActiveRecord::Base
   has_one :place
   has_many :conversations
 
+  def new_messages?
+    conversations.where(read: false).count.nonzero?
+  end
+
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)

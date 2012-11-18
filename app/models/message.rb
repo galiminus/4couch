@@ -20,6 +20,7 @@ class Message < ActiveRecord::Base
       Conversation.where(user_id: user, recipient_id: recipient).first_or_create!
     message = Message.create!(attributes.merge(conversation: conversation, user: sender))
     conversation.messages << message
+    conversation.unread!
     conversation.save!
   end
 end

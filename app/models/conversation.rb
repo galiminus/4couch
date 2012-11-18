@@ -4,7 +4,15 @@ class Conversation < ActiveRecord::Base
 
   has_many :messages
 
-  attr_accessible :recipient, :user
+  attr_accessible :recipient, :user, :read
+
+  def read!
+    update_attributes(read: true)
+  end
+
+  def unread!
+    update_attributes(read: false)
+  end
 
   def to_param
     recipient.slug

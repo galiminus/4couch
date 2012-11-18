@@ -13,8 +13,7 @@ namespace :db do
                          :password => "password",
                          :password_confirmation => "password"
 
-      place = Place.create :title => Populator.words(1..3).titleize,
-                           :description => Populator.sentences(2..10),
+      place = Place.create :description => Populator.sentences(2..10),
                            :latitude => rand(360) - 180,
                            :longitude => rand(360) - 180,
                            :user => user
