@@ -2,6 +2,10 @@ ul.nav.nav-tabs.nav-stacked
   - ([@conversation] + @user.conversations).uniq.each do |conversation|
     li class=active_on_recipient(conversation, @recipient)
       = link_to user_conversation_path(@user, conversation) do
-        = image_tag conversation.recipient.gravatar_url size: 32
-        div.pull-right
+        = image_tag conversation.recipient.gravatar_url size: 64
+        .pull-right
           strong= conversation.recipient.username
+          - if conversation.read
+            p.pagination-right
+              span.label.label-important New
+

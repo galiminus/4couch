@@ -1,7 +1,7 @@
 ul.nav.nav-tabs.nav-stacked
   li class=active_in_user(@user)
     = link_to @user do
-      = image_tag @user.gravatar_url size: 32
+      = image_tag @user.gravatar_url size: 64
       div.pull-right
         strong= @user.username
 
