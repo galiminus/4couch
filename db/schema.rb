@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121117223817) do
+ActiveRecord::Schema.define(:version => 20121118000607) do
 
   create_table "communities", :force => true do |t|
     t.string   "name"
@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(:version => 20121117223817) do
   add_index "messages", ["user_id"], :name => "index_messages_on_user_id"
 
   create_table "places", :force => true do |t|
-    t.string   "title"
     t.text     "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
