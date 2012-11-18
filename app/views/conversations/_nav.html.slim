@@ -1,5 +1,5 @@
 ul.nav.nav-tabs.nav-stacked
-  - @user.conversations.each do |conversation|
+  - ([@conversation] + @user.conversations).uniq.each do |conversation|
     li class=active_on_recipient(conversation, @recipient)
       = link_to user_conversation_path(@user, conversation) do
         = image_tag conversation.recipient.gravatar_url size: 32
