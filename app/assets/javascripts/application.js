@@ -15,33 +15,6 @@
 //= require twitter/bootstrap
 
 $(document).ready(function() {
-/*
-    function setMarkerLink(marker) {
-	google.maps.event.
-	    addListener(marker.serviceObject,
-			'click',
-			function() {
-			    window.location = marker.link;
-			});
-
-    }
-
-    function setMarkersLinks() {
-        for (var i = 0; i <  Gmaps.map.markers.length; ++i) {
-	    marker = Gmaps.map.markers[i];
-	    if (!marker.link) {
-		return;
-	    }
-	    setMarkerLink(marker);
-        }
-    }
-
-    if (Gmaps.map) {
-	Gmaps.map.callback = function() {
-	    setMarkersLinks();
-	}
-    }
-*/
     var locations = {};
     $(".search-city").typeahead({
 	minLength: 3,
