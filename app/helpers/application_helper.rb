@@ -18,8 +18,8 @@ module ApplicationHelper
   end
 
   def markdown(text)
-    renderer = Redcarpet::Render::XHTML.new
-    extensions = {fenced_code_blocks: true}
+    renderer = Redcarpet::Render::HTML.new link_attributes: {rel: 'nofollow', target: '_blank'}, filter_html: true
+    extensions = {no_intra_emphasis: true, tables: true, fenced_code_blocks: true, autolink: true, strikethrough: true, superscript: true}
     redcarpet = Redcarpet::Markdown.new(renderer, extensions)
     redcarpet.render text.to_s
   end

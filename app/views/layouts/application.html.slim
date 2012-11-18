@@ -54,7 +54,7 @@ html lang="en"
                 - if current_user.new_messages?
                   li
                     a href=user_conversations_path(current_user)
-                      span.label.label-important t :new_messages
+                      span.label.label-important t(:new_messages)
                 li class="dropdown #{active_in_user(current_user)}"
                   = link_to "#", class: 'dropdown-toggle user-nav-link visible-desktop', data: {toggle: 'dropdown'} do
                     span= current_user.username
@@ -65,7 +65,7 @@ html lang="en"
                         strong= t :profile
                     - unless current_user.conversations.count.zero?
                       li
-                        = link_to t :conversations, user_conversations_path(current_user)
+                        = link_to t(:conversations), user_conversations_path(current_user)
                     li.divider
                     li
                       = link_to t('edit.settings'), edit_user_section_path(current_user, :settings)
