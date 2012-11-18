@@ -50,6 +50,7 @@ end
 group :development do
   gem 'capistrano-af83'
   gem 'rvm-capistrano'
+  gem 'capistrano-helpers'
 end
 
 gem 'thin'

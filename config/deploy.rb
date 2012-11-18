@@ -1,3 +1,5 @@
+require 'capistrano-helpers/specs'
+
 require "bundler/capistrano"
 
 set :rvm_ruby_string, '1.9.3@four_couch'
