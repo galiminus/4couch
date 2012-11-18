@@ -57,7 +57,7 @@ $(document).ready(function() {
 	    });
 	},
 	updater: function(name) {
-	    if (this.$element.data('forward') == 'true') {
+	    if (this.$element.data('forward')) {
 		$(location).attr('href', '/places?q=' + name + '&lat=' + locations[name].lat + "&lng=" + locations[name].lng);
 	    } else {
 		return (name);
