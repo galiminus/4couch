@@ -4,15 +4,12 @@
 - if @conversation.messages.any?
   ul.media-list
     - @conversation.messages.each do |message|
-      li.media
-        - if @user == message.user
-          a.pull-right href="#"
-            = image_tag message.user.gravatar_url size: 64, class: "media-object"
-          .media-body.pull-right
-            == markdown(message.body)
-        - else
-          a.pull-left href="#"
-            = image_tag message.user.gravatar_url size: 64, class: "media-object"
-          .media-body.pull-left
-            == markdown(message.body)
+      li class=media_class_for(message, @user)
+        a href=user_path(message.user) class=media_object_link_class_for(message, @user)
+          = image_tag message.user.gravatar_url size: 64, class: "media-object"
+        .media-body
+          a href=user_path(message.user)
+            h4.media-heading= message.user.username
+          == markdown(message.body)
+    .clearfix
 = render 'messages/form'
