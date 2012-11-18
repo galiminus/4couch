@@ -44,6 +44,7 @@ group :test, :development do
   gem "fabrication"
   gem 'faker'
   gem 'populator'
+  gem "nyan-cat-formatter"
 end
 
 group :development do
