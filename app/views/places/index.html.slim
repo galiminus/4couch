@@ -1,5 +1,5 @@
-p
+.row
   - if @lat.present? && @lng.present?
-    #places-map.map data-lat=@lat.to_f data-lng=@lng.to_f
+    #places-map.map.span6 data-lat=@lat.to_f data-lng=@lng.to_f
   - else
-    #places-map.map
+    #places-map.map.span10
