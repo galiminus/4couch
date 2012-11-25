@@ -3,7 +3,7 @@ class PlacesController < ApplicationController
     @lat = params[:lat]
     @lng = params[:lng]
 
-    @places = Place.all
+    @places = Place.select([:id, :latitude, :longitude])
 
     respond_to do |format|
       format.html
