@@ -38,9 +38,9 @@ html lang="en"
                 form.navbar-search.pull-left action=places_path
                   input#search.search-query.search-city.span3 type="text" placeholder=@search_placeholder name="q" data-forward="true"
             ul.nav
-              li class=active_in_world_map
-                a href=places_path = t :world_map
               - if user_signed_in?
+                li class=active_in_world_map
+                  a href=places_path = t :world_map
                 - if current_user.place.present?
                   li class=active_in_my_place(current_user, @place)
                     a href=user_place_path(current_user) = t :my_place
