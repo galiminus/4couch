@@ -23,7 +23,7 @@ ul.nav.nav-tabs.nav-stacked
   ul.nav.nav-tabs.nav-stacked
     - if @place.present?
       li
-        #map= places_map([@place], lat: @place.latitude, lng: @place.longitude)
+        #map= places_map([@place], lat: @place.lat, lng: @place.lng)
 
   ul.nav.nav-tabs.nav-stacked
     li

@@ -14,8 +14,8 @@ namespace :db do
                          :password_confirmation => "password"
 
       place = Place.create :description => Populator.sentences(2..10),
-                           :latitude => rand(360) - 180,
-                           :longitude => rand(360) - 180,
+                           :lat => rand(360) - 180,
+                           :lng => rand(360) - 180,
                            :user => user
     end
   end

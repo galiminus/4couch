@@ -23,4 +23,4 @@ $ ->
 
   $.get "/places.json", (places) ->
     $.each places, (index, place) ->
-      map.gmap3(marker: { latLng: [place.latitude, place.longitude] })
+      map.gmap3(marker: { latLng: [place.lat, place.lng] })

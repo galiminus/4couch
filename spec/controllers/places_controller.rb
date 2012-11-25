@@ -11,7 +11,7 @@ describe PlacesController do
       places = JSON.parse(response.body)
 
       places.size.should == 3
-      places.first.keys.sort.should == ['id', 'latitude', 'longitude']
+      places.first.keys.sort.should == ['id', 'lng', 'lat']
     end
   end
 end

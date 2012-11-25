@@ -9,7 +9,7 @@ class Place < ActiveRecord::Base
     indexes :description,  :analyzer => 'snowball'
   end
 
-  attr_accessible :description, :title, :latitude, :longitude, :user, :city
+  attr_accessible :description, :title, :lat, :lng, :user, :city
 
   belongs_to :user
 
@@ -19,7 +19,7 @@ class Place < ActiveRecord::Base
     city = City.search("#{self.city}*").first
 
     self.city = "#{city.name} - #{city.admin1}, #{city.country}"
-    self.latitude = city.lat
-    self.longitude = city.lng
+    self.lat = city.lat
+    self.lng = city.lng
   end
 end

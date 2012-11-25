@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121118012800) do
+ActiveRecord::Schema.define(:version => 20121125233735) do
 
   create_table "communities", :force => true do |t|
     t.string   "name"
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(:version => 20121118012800) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.string   "slug"
-    t.float    "latitude"
-    t.float    "longitude"
+    t.float    "lat"
+    t.float    "lng"
     t.string   "city"
     t.string   "country"
     t.boolean  "gmaps"

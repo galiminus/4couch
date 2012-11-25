@@ -26,7 +26,7 @@ $(function() {
 	$.each(places, function(index, place) {
 	    map.gmap3({
 		marker: {
-		    latLng: [place.latitude, place.longitude]
+		    latLng: [place.lat, place.lng]
 		}
 	    });
 	});
