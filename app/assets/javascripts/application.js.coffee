@@ -13,10 +13,10 @@ $ ->
         process $.map(cities, (city) =>
           name = "#{city.name} - #{city.admin1}, #{city.country}"
           @cities[name] = city
-          name
+          return name
         )
       
     updater: (name) =>
       $(location).attr href: "/places?q=#{name}&lat=#{@cities[name].lat}&lng=#{@cities[name].lng}"
-      name
+      return name
 
