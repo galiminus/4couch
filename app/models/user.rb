@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  attr_accessible :avatar
+  include ActiveModel::ForbiddenAttributesProtection
+
   has_attached_file :avatar, :styles => { :medium => ["64x64>", :jpg] }
 
   extend FriendlyId
@@ -10,12 +11,6 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-
-  attr_accessible :login, :username, :email,
-                  :password, :password_confirmation,
-                  :remember_me, :locale, :name, :website, :biography
-
-  attr_accessor :login
 
   has_one :place
   has_many :conversations

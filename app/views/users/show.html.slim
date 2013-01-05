@@ -1,4 +1,8 @@
 - content_for(:nav) do
   = render 'users/nav'
 
+- if flash[:notice]
+  .alert.alert-success
+    button.close data-dismiss="alert" &times;
+    = flash[:notice]
 == markdown(@user.biography)

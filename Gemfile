@@ -23,6 +23,9 @@ gem 'google-analytics-rails'
 gem 'redis-rails'
 gem 'redcarpet'
 
+gem 'strong_parameters'
+
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
