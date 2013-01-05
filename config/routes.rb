@@ -8,7 +8,7 @@ FourCouch::Application.routes.draw do
     match "/conversations/:recipient_id/messages" => "messages#create", :via => :post
 
     resources :conversations, :only => [:show, :index] do
-      resources :messages, :only => [:create]
+      resources :messages, :only => [:new, :create]
     end
 
     resource :place, :controller => 'users_places'
